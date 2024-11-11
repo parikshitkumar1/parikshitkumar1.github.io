@@ -3,163 +3,279 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parikshit Kumar - Machine Learning Professional</title>
+    <title>Parikshit Kumar - Portfolio</title>
     <style>
+        /* Custom CSS for pink and black theme */
         body {
-            font-family: Helvetica, Arial, sans-serif;
-            line-height: 1.6;
+            font-family: Arial, sans-serif;
+            background-color: #fff;
             color: #333;
+            margin: 0;
+            padding: 0;
         }
-        h1 {
-            font-size: 2em;
+        header {
+            background-color: #FF69B4;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 10px 0 0 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
             font-weight: bold;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            border-bottom: 1px solid #ddd;
         }
         h2 {
-            font-size: 1.5em;
-            margin-top: 1.2em;
-        }
-        h3 {
-            font-size: 1.2em;
-            font-weight: bold;
-            color: #0056b3;
-        }
-        a {
-            color: #0056b3;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
+            color: #FF69B4;
         }
         ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        .collapsible-content {
-            display: none;
-        }
-        .collapsible-content.open {
-            display: block;
-        }
-        .highlight {
-            color: #007bff;
-            font-weight: bold;
+            list-style-type: disc;
+            padding-left: 20px;
         }
     </style>
-    <script>
-        function toggleContent(id) {
-            const element = document.getElementById(id);
-            element.classList.toggle("open");
-        }
-    </script>
 </head>
 <body>
     <header>
         <h1>Parikshit Kumar</h1>
-        <p>
-            <a href="mailto:mr.kumar.parikshit@gmail.com">mr.kumar.parikshit@gmail.com</a> • 
-            <a href="https://www.linkedin.com/in/parikshitkumar1">LinkedIn</a> • 
-            <a href="https://github.com/parikshitkumar1">GitHub</a> • 
-            +1 (951)-544-4046 • California, USA
-        </p>
+        <nav>
+            <ul>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects and Papers</a></li>
+                <li><a href="#organizations">Organizations</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
+    <!-- Profile Section -->
     <section id="profile">
-        <h2>Profile</h2>
-        <p>
-            Machine Learning and Computer Vision Specialist with four years of R&D experience in deep learning, NLP, and computer vision. My work bridges academic research and applied projects, from advancing autonomous navigation to deploying recommendation systems. I’m passionate about tackling complex AI challenges and applying innovation-driven solutions to real-world problems.
-        </p>
-    </section>
+    <h2>Profile</h2>
+    <p>A tech enthusiast with a purpose, I dive into the world of machine learning and computer vision to create solutions that aren't just clever but actually useful. With a background in deep learning, NLP, and data science, I thrive on tackling complex challenges and finding ways to make data work harder (so humans don’t have to). Always curious, occasionally caffeinated, and constantly striving to bridge the gap between cutting-edge tech and real-world impact.</p>
+</section>
 
-    <section id="skills">
+<section id="skills">
         <h2>Skills</h2>
-        <p><strong>Technical Skills:</strong> Deep Learning, NLP, LLMs, Computer Vision, Generative Modeling, Diffusion Models, Machine Learning, Reinforcement Learning, Data Analysis, Data Visualization, Statistics, Python, C++, C, Keras, TensorFlow, PyTorch, PyTorch Lightning, FastAI, OpenCV, Numpy, Matplotlib, Pandas, Hugging Face, SQL, Flask, BeautifulSoup, Graph Neural Networks, XGBoost</p>
-        <p><strong>Tools & Platforms:</strong> Tableau, MLOps, GCP, AWS, Kubernetes, Docker, Git CLI, Jupyter Notebooks, Anaconda, Linux Terminal, Robot Operating System (ROS), CUDA, MPS (Apple), Apache Spark, Tensorboard, Firebase, MS Azure</p>
+        <div>
+            <h3>Technical Skills:</h3>
+            <p>Deep Learning, NLP, LLMs, Computer Vision, Generative Modeling, Diffusion Models, Machine Learning, Reinforcement Learning, Data Analysis, Data Visualization, Statistics, Python, C++, C, Keras, TensorFlow, PyTorch, PyTorch Lightning, FastAI, OpenCV, Numpy, Matplotlib, Pandas, Hugging Face, SQL, Flask, BeautifulSoup, Graph Neural Networks, XGBoost</p>
+        </div>
+        <div>
+            <h3>Tools & Platforms:</h3>
+            <p>Tableau, MLOps, GCP, AWS, Kubernetes, Docker, Git CLI, Jupyter Notebooks, Anaconda, Linux Terminal, Robot Operating System (ROS), CUDA, MPS (Apple), Apache Spark, Tensorboard, Firebase, MS Azure</p>
+        </div>
     </section>
 
+
+    <!-- Experience Section -->
     <section id="experience">
         <h2>Experience</h2>
         <ul>
             <li>
-                <h3>Student Assistant, Computer Vision Research - <em>University of California, Riverside</em></h3>
-                <p>Jul 2024 - Present</p>
-                <p>
-                    Led projects on mosquito orientation classification with a <span class="highlight">96% accuracy rate</span>, improving morphological analysis by <span class="highlight">15%</span>. Spearheaded efforts in biological feature extraction using deep learning techniques.
-                    <button onclick="toggleContent('experience1')">Read more</button>
-                </p>
-                <div id="experience1" class="collapsible-content">
-                    <ul>
-                        <li>Optimized edge detection and morphological transformations for mosquito image analysis, refining detailed feature extraction.</li>
-                        <li>Enhanced dataset quality with a <span class="highlight">50% increase in sample size</span>, which reduced variance by <span class="highlight">20%</span> and improved detection accuracy by <span class="highlight">30%</span>.</li>
-                        <li>Created models adaptable to new species and samples, achieving consistent accuracy across diverse datasets.</li>
-                    </ul>
-                </div>
+                <h3>Student Assistant, Computer Vision Research - University of California, Riverside</h3>
+                <p><em>Jul 2024 – Present</em></p>
+                <ul>
+                    <li>Developed deep learning models for mosquito orientation classification with 96% accuracy, enhancing morphological pattern detection by 15%.</li>
+                    <li>Applied advanced image processing techniques for biological feature extraction, analyzing mosquito structures in detail.</li>
+                    <li>Conducted a sensitivity analysis with a 50% sample size increase, reducing variance by 20% and improving detection accuracy by 30%.</li>
+                    <li>Collaborated with entomologists to optimize algorithms tailored to specific biological requirements.</li>
+                    <li>Documented processes and findings in research publications and shared insights with the research community.</li>
+                    <li>Presented findings at academic conferences, receiving positive feedback for innovation in feature extraction.</li>
+                </ul>
+                <hr class="styled-hr"> <!-- Add this line -->
             </li>
-            <!-- Additional Experience entries following a similar pattern -->
+            <li>
+                <h3>Research Assistant - University of Guelph, Ontario</h3>
+                <p><em>Jan 2023 – Jun 2023</em></p>
+                <ul>
+                    <li>Utilized image segmentation with LLM-based text analysis to assess soil properties, improving accuracy by 18%.</li>
+                    <li>Designed an automated application, reducing data processing time by 40% and enhancing indicator detection accuracy by 25%.</li>
+                    <li>Co-authored a paper on data-driven soil characterization, contributing to a 15% performance boost.</li>
+                    <li>Collaborated with soil scientists to refine model parameters for precise results.</li>
+                    <li>Presented research findings to academic and industry experts, receiving commendations for practical applications.</li>
+                    <li>Mentored junior researchers on best practices for data collection and analysis.</li>
+                </ul>
+                <hr class="styled-hr"> <!-- Add this line -->
+            </li>
+            <li>
+                <h3>Computer Vision Intern - UT Dallas & IIT Bombay, Remote</h3>
+                <p><em>Mar 2022 – Jul 2022</em></p>
+                <ul>
+                    <li>Created deep learning algorithms for autonomous vehicles, boosting object detection accuracy by 15% using Faster R-CNN and YOLO.</li>
+                    <li>Enhanced segmentation accuracy by 20% with 3D simulations, improving off-road vehicle performance.</li>
+                    <li>Developed a preprocessing pipeline, reducing training time by 25% for large datasets.</li>
+                    <li>Collaborated with a multidisciplinary team to refine detection algorithms for varied terrain types.</li>
+                    <li>Integrated machine learning models into real-time applications, optimizing system responsiveness.</li>
+                    <li>Presented findings at a technology symposium, showcasing innovations in autonomous navigation.</li>
+                </ul>
+                <hr class="styled-hr"> <!-- Add this line -->
+            </li>
+            <li>
+                <h3>Machine Learning Engineer - Cortex Analytics Inc., Hyderabad, India</h3>
+                <p><em>Jan 2021 – Sept 2022</em></p>
+                <ul>
+                    <li>Developed a recommendation system using collaborative filtering and NLP insights, driving a 22% increase in user engagement and retention.</li>
+                    <li>Implemented AWS-based data pipelines for real-time processing, reducing model training time by 35%.</li>
+                    <li>Streamlined deployment with MLOps workflows, achieving a 40% reduction in release time.</li>
+                    <li>Engineered model monitoring tools to identify and resolve pipeline inefficiencies.</li>
+                    <li>Automated model retraining, enabling continuous learning based on real-time data inputs.</li>
+                    <li>Enhanced system scalability, accommodating increased user engagement without performance lag.</li>
+                </ul>
+                <hr class="styled-hr"> <!-- Add this line -->
+            </li>
+            <li>
+                <h3>ML Research Engineer - Veritas Insight Labs, Chennai, India</h3>
+                <p><em>Aug 2021 – Aug 2022</em></p>
+                <ul>
+                    <li>Optimized large-scale distributed training systems on AWS and GCP, achieving a 40% reduction in computational costs.</li>
+                    <li>Implemented real-time monitoring tools, increasing model training stability by 30%.</li>
+                    <li>Integrated transformer architectures, setting new internal accuracy benchmarks.</li>
+                    <li>Collaborated with cross-functional teams to troubleshoot model performance issues.</li>
+                    <li>Developed automated testing suites, ensuring model consistency and reliability across deployments.</li>
+                    <li>Published insights in internal technical documents, sharing best practices for model deployment.</li>
+                </ul>
+              
+            </li>
         </ul>
     </section>
 
+    <!-- Projects and Papers Section -->
     <section id="projects">
         <h2>Projects and Papers</h2>
         <ul>
             <li>
-                <h3><a href="https://drive.google.com/file/d/1FS9CSHUc-Ba1uc_RK1pveLZLZD2hieo0/view?usp=sharing">Generative Networks and VAEs to Assist Artists</a></h3>
-                <p>
-                    Designed a VAE pipeline that empowers artists to refine sketches, achieving <span class="highlight">90.6% accuracy</span> in style adaptation. Presented at ICCET 2023.
-                    <button onclick="toggleContent('project1')">Read more</button>
-                </p>
-                <div id="project1" class="collapsible-content">
-                    <ul>
-                        <li>Developed a Variational Autoencoder (VAE) architecture tailored for artists to apply creative control over sketch enhancements.</li>
-                        <li>Integrated style-transfer capabilities, enabling the model to adapt to various artistic styles dynamically.</li>
-                        <li>Optimized generative training algorithms, reducing model training time by <span class="highlight">20%</span> and improving sketch refinement efficiency by <span class="highlight">30%</span>.</li>
-                        <li>Achieved <span class="highlight">90.6% accuracy</span> on CUHK Face Sketch Database, a significant improvement over baseline models.</li>
-                        <li>Presented findings at ICCET 2023, demonstrating the VAE’s impact on enhancing workflows for artists globally.</li>
-                        <li>Enabled artists to maintain unique creative styles in sketches, fostering adoption in creative industries and educational settings.</li>
-                    </ul>
-                </div>
+                <h3>Generative Networks and VAEs to Assist Artists - SRM IST, Paper and Project</h3>
+                <p><em>Apr 2021 – Jun 2021</em></p>
+                <ul>
+                    <li>Designed Variational Autoencoders (VAEs) for sketch refinement, improving workflow efficiency by 30% and enhancing creative control.</li>
+                    <li>Achieved 90.6% accuracy with the CUHK Face Sketch Database, presenting findings at ICCET 2023 in India.</li>
+                    <li>Implemented innovative techniques to improve color and detail retention in generated images.</li>
+                    <li>Collaborated with artists to tailor the model's capabilities for practical use in the creative industry.</li>
+                    <li>Deployed the model via a user-friendly interface, receiving positive feedback from early adopters.</li>
+                    <li>Contributed to open-source repositories, enabling further research and development by the community.</li>
+                </ul>
+                <hr class="styled-hr"> <!-- Add this line -->
             </li>
             <li>
-                <h3><a href="https://drive.google.com/file/d/1b38EGJy6DHYQBAtC-keupJsT0wD1Djkd/view?usp=sharing">Energy Price Forecasting Using LSTMs and ARIMA</a></h3>
-                <p>
-                    Collaborated on forecasting models that improved energy price predictions by <span class="highlight">18%</span> for Australian markets, presented at AIJR 2022.
-                    <button onclick="toggleContent('project2')">Read more</button>
-                </p>
-                <div id="project2" class="collapsible-content">
-                    <ul>
-                        <li>Devised LSTM and ARIMA-based models to capture seasonality and trends in Australian energy price data.</li>
-                        <li>Enhanced model accuracy by <span class="highlight">18%</span> over previous implementations, catering to market volatility.</li>
-                        <li>Conducted extensive data analysis, identifying high-impact factors influencing energy price fluctuations.</li>
-                        <li>Developed a custom visualization dashboard for stakeholders to interpret predictions and track daily market changes.</li>
-                        <li>Presented findings at AIJR Conference 2022, providing insights into practical applications of time-series forecasting.</li>
-                        <li>Delivered models optimized for scalability, enabling integration across varying geographies and seasonal variations.</li>
-                    </ul>
-                </div>
+                <h3>Energy Price Forecasting Using LSTMs and ARIMA - SATU, Paper and Project</h3>
+                <p><em>Apr 2021 – Apr 2021</em></p>
+                <ul>
+                    <li>Collaborated on energy price forecasting with LSTMs and ARIMA models, achieving an 18% accuracy improvement for Australian energy datasets.</li>
+                    <li>Presented findings at the AIJR Conference 2022, showcasing insights from NLP-based trend analysis.</li>
+                    <li>Enhanced model stability and prediction speed, supporting real-time decision-making.</li>
+                    <li>Collaborated with data scientists to optimize hyperparameters for superior performance.</li>
+                    <li>Provided datasets and resources for further research, establishing a foundation for future projects.</li>
+                    <li>Developed visualizations for easy interpretation of model predictions by non-technical stakeholders.</li>
+                </ul>
+                <hr class="styled-hr"> <!-- Add this line -->
+            </li>
+            <li>
+                <h3>Anime Aesthetic Transformation with Pix2Pix GAN</h3>
+                <p><em>Apr 2021 – Jun 2021</em></p>
+                <ul>
+                    <li>Utilized Pix2Pix GAN to transform traditional anime images into aesthetically enhanced artworks.</li>
+                    <li>Trained the model on a diverse dataset, improving color enhancement and detail preservation.</li>
+                    <li>Integrated a feedback loop, allowing iterative refinement based on user feedback.</li>
+                    <li>Presented the project at a local tech fair, receiving praise for visual quality and innovation.</li>
+                    <li>Implemented efficient data preprocessing, reducing training time without sacrificing quality.</li>
+                    <li>Collaborated with anime artists for real-world feedback and model adjustments.</li>
+                </ul>
+                <hr class="styled-hr"> <!-- Add this line -->
+            </li>
+            <li>
+                <h3>Generative Network-Powered Image Synthesis</h3>
+                <p><em>Apr 2021</em></p>
+                <ul>
+                    <li>Created a WGAN-based application to produce lifelike paintings with gradient penalty for stability.</li>
+                    <li>Trained on 8k paintings by Albrecht Dürer, showcasing artistic versatility.</li>
+                    <li>Implemented backend in PyTorch and frontend in Streamlit, deployed on Heroku.</li>
+                    <li>Enhanced model output quality through regular tuning, resulting in realistic aesthetics.</li>
+                    <li>Received feedback from art communities to refine the model’s artistic output.</li>
+                    <li>Integrated a user interface for interactive engagement with the generative model.</li>
+                </ul>
+                <hr class="styled-hr"> <!-- Add this line -->
+            </li>
+            <li>
+                <h3>Optimized Firearm Detection</h3>
+                <p><em>Dec 2020 – Feb 2021</em></p>
+                <ul>
+                    <li>Developed an OpenCV application with YOLOv3 and YOLOv3-Tiny for firearm detection in images and videos.</li>
+                    <li>Trained on a custom dataset, enhancing model precision and recall metrics.</li>
+                    <li>Implemented real-time detection for CCTV integration in security systems.</li>
+                    <li>Optimized inference time, enabling faster object detection in live video streams.</li>
+                    <li>Conducted extensive testing in varied lighting and environmental conditions.</li>
+                    <li>Collaborated with security experts to refine model accuracy for practical application.</li>
+                </ul>
+            
             </li>
         </ul>
     </section>
 
+    <!-- Organizations Section -->
+    <section id="organizations">
+        <h2>Organizations</h2>
+        <ul>
+            <li>
+                <h3>Next Tech Lab, Member</h3>
+                <p><em>Apr 2021 – Jun 2023</em></p>
+                <ul>
+                    <li>Led workshops, sharing machine learning expertise and fostering a collaborative learning environment.</li>
+                    <li>Collaborated with researchers on AI projects in computational biology and machine learning.</li>
+                    <li>Reviewed recent AI advancements, contributing to the lab's mission in computational biology.</li>
+                </ul>
+                <hr class="styled-hr"> <!-- Add this line -->
+            </li>
+            <li>
+                <h3>Team SRMAUV - SRM Autonomous Underwater Vehicle, Member</h3>
+                <ul>
+                    <li>Contributed to Autonomous Underwater Vehicle (AUV) development, using ROS for integration.</li>
+                    <li>Engineered algorithms for pathfinding and object detection in underwater environments.</li>
+                    <li>Worked in a multidisciplinary team to optimize AUV performance for marine exploration.</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Education Section -->
     <section id="education">
         <h2>Education</h2>
         <ul>
             <li>
-                <h3>Master of Science, Computer Science - <em>UC Riverside</em></h3>
-                <p>09/2023 - Present</p>
-                <p>GPA: 3.6</p>
+                <h3>Master of Science, Computer Science - UC Riverside</h3>
+                <p><em>09/2023 – Present | GPA: 3.6</em></p>
             </li>
             <li>
-                <h3>Bachelor of Technology, Computer Science - <em>SRM IST</em></h3>
-                <p>2019 - 05/2023</p>
-                <p>GPA: 4.0</p>
+                <h3>Bachelor of Technology, Computer Science - SRM IST</h3>
+                <p><em>2019 – 05/2023 | GPA: 4.0</em></p>
             </li>
         </ul>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact">
         <h2>Contact</h2>
         <ul>
-            <li>Email: <a href="mailto:mr.kumar.parikshit@gmail.com">mr.kumar.parikshit@gmail.com</a></li>
+            <li>Email: mr.kumar.parikshit@gmail.com</li>
             <li>Phone: +1 (951)-544-4046</li>
-            <li>Social Media: <a href="https://www.linkedin.com/in/parikshitkumar1">LinkedIn</a> • <a href="https://github.com/parikshitkumar1">GitHub</a> • <a href="https://www.kaggle.com/parikshitkumar">Kaggle</a></li>
+            <li>Social Media: <a href="https://www.linkedin.com/in/parikshitkumar1">LinkedIn</a>, <a href="https://github.com/parikshitkumar1">GitHub</a></li>
         </ul>
     </section>
 </body>
