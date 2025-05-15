@@ -7,47 +7,140 @@ html, body, header, nav, ul, li, h1, h2, p, footer {
 /* Global styles */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: black; /* Black background color */
-    color: #fff; /* White text color */
+    background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #ff80ab 100%); /* Gradient background */
+    color: #fff;
+    min-height: 100vh;
+    letter-spacing: 0.02em;
 }
 
 header {
-    background-color: #ff80ab; /* Pink background color */
-    padding: 20px;
+    background: rgba(255, 128, 171, 0.95);
+    padding: 32px 0 20px 0;
     text-align: center;
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    border-radius: 0 0 24px 24px;
+    box-shadow: 0 4px 24px rgba(255, 128, 171, 0.2);
+    margin-bottom: 32px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    letter-spacing: 0.08em;
+    margin-bottom: 8px;
+    font-weight: 700;
+    text-shadow: 0 2px 8px #ff80ab44;
 }
 
 nav ul {
     list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 20px;
+    display: inline-block;
+    margin: 0 18px;
+    transition: transform 0.2s;
+}
+
+nav ul li:hover {
+    transform: translateY(-3px) scale(1.08);
 }
 
 nav ul li a {
-    color: #fff; /* White text color */
+    color: #fff;
     text-decoration: none;
-    font-weight: bold; /* Bold font weight */
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 6px 14px;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+}
+
+nav ul li a:hover {
+    background: #fff;
+    color: #ff80ab;
 }
 
 section {
-    padding: 50px 20px;
-    background-color: black; /* Black background color */
+    padding: 40px 24px;
+    background: rgba(20, 20, 30, 0.92);
+    margin: 32px auto;
+    border-radius: 18px;
+    box-shadow: 0 2px 16px rgba(255, 128, 171, 0.08);
+    max-width: 900px;
+    border: 1.5px solid #ff80ab33;
 }
 
 h2 {
-    margin-bottom: 20px;
-    color: #ff80ab; /* Pink heading color */
+    margin-bottom: 18px;
+    color: #ff80ab;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-shadow: 0 1px 6px #ff80ab33;
+}
+
+h3 {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 28px;
+    margin-bottom: 18px;
+}
+
+ul ul {
+    list-style-type: circle;
+    padding-left: 22px;
+}
+
+li {
+    margin-bottom: 8px;
+    line-height: 1.7;
+}
+
+p, li {
+    font-size: 1.08rem;
 }
 
 footer {
-    background-color: #ff80ab; /* Pink background color */
+    background: rgba(255, 128, 171, 0.95);
     text-align: center;
-    padding: 20px;
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    padding: 24px 0;
+    border-radius: 18px 18px 0 0;
+    box-shadow: 0 -2px 12px rgba(255, 128, 171, 0.12);
+    margin-top: 40px;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+/* Add subtle card hover effect for sections */
+section:hover {
+    box-shadow: 0 6px 32px #ff80ab44, 0 2px 16px rgba(255, 128, 171, 0.12);
+    border-color: #ff80ab99;
+    transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+    section {
+        padding: 24px 8px;
+        margin: 18px 4px;
+    }
+    header h1 {
+        font-size: 2rem;
+    }
+    nav ul li {
+        margin: 0 8px;
+    }
+    h2 {
+        font-size: 1.3rem;
+    }
 }
