@@ -6,31 +6,32 @@ html, body, header, nav, ul, li, h1, h2, p, footer {
 
 /* Global styles */
 body {
-    font-family: 'Roboto', sans-serif;
-    background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #ff80ab 100%); /* Gradient background */
-    color: #fff;
+    font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(120deg, #0f0c29 0%, #302b63 60%, #ff80ab 100%);
+    color: #f5f5f7;
     min-height: 100vh;
     letter-spacing: 0.02em;
+    line-height: 1.7;
 }
 
 header {
-    background: rgba(255, 128, 171, 0.95);
-    padding: 32px 0 20px 0;
+    background: linear-gradient(90deg, #ff80ab 60%, #302b63 100%);
+    padding: 36px 0 24px 0;
     text-align: center;
-    border-radius: 0 0 24px 24px;
-    box-shadow: 0 4px 24px rgba(255, 128, 171, 0.2);
-    margin-bottom: 32px;
+    border-radius: 0 0 32px 32px;
+    box-shadow: 0 6px 32px rgba(255, 128, 171, 0.18);
+    margin-bottom: 36px;
     position: sticky;
     top: 0;
     z-index: 10;
 }
 
 header h1 {
-    font-size: 2.8rem;
-    letter-spacing: 0.08em;
-    margin-bottom: 8px;
-    font-weight: 700;
-    text-shadow: 0 2px 8px #ff80ab44;
+    font-size: 2.9rem;
+    letter-spacing: 0.09em;
+    margin-bottom: 10px;
+    font-weight: 800;
+    text-shadow: 0 2px 12px #ff80ab55, 0 1px 0 #fff2;
 }
 
 nav ul {
@@ -52,95 +53,102 @@ nav ul li:hover {
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-weight: 600;
-    font-size: 1.1rem;
-    padding: 6px 14px;
-    border-radius: 6px;
-    transition: background 0.2s, color 0.2s;
+    font-weight: 700;
+    font-size: 1.13rem;
+    padding: 7px 18px;
+    border-radius: 8px;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 1px 6px #ff80ab22;
 }
 
 nav ul li a:hover {
     background: #fff;
     color: #ff80ab;
+    box-shadow: 0 2px 12px #ff80ab55;
 }
 
 section {
-    padding: 40px 24px;
-    background: rgba(20, 20, 30, 0.92);
-    margin: 32px auto;
-    border-radius: 18px;
-    box-shadow: 0 2px 16px rgba(255, 128, 171, 0.08);
-    max-width: 900px;
-    border: 1.5px solid #ff80ab33;
+    padding: 44px 28px;
+    background: rgba(24, 24, 36, 0.97);
+    margin: 36px auto;
+    border-radius: 22px;
+    box-shadow: 0 4px 24px #ff80ab22, 0 2px 16px #302b6344;
+    max-width: 950px;
+    border: 1.5px solid #ff80ab44;
+    transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+section:hover {
+    box-shadow: 0 8px 40px #ff80ab55, 0 2px 16px #302b6388;
+    border-color: #ff80abcc;
 }
 
 h2 {
-    margin-bottom: 18px;
+    margin-bottom: 20px;
     color: #ff80ab;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    text-shadow: 0 1px 6px #ff80ab33;
+    font-size: 2.1rem;
+    font-weight: 800;
+    letter-spacing: 0.045em;
+    text-shadow: 0 2px 10px #ff80ab33, 0 1px 0 #fff2;
+    border-left: 5px solid #ff80ab;
+    padding-left: 16px;
 }
 
 h3 {
     color: #fff;
-    font-size: 1.2rem;
-    margin-bottom: 6px;
-    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 7px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
 }
 
 ul {
     list-style-type: disc;
-    padding-left: 28px;
-    margin-bottom: 18px;
+    padding-left: 32px;
+    margin-bottom: 20px;
 }
 
 ul ul {
     list-style-type: circle;
-    padding-left: 22px;
+    padding-left: 24px;
 }
 
 li {
-    margin-bottom: 8px;
-    line-height: 1.7;
+    margin-bottom: 10px;
+    line-height: 1.8;
+    font-size: 1.09rem;
 }
 
 p, li {
-    font-size: 1.08rem;
+    font-size: 1.09rem;
+    color: #eaeaf0;
 }
 
 footer {
-    background: rgba(255, 128, 171, 0.95);
+    background: linear-gradient(90deg, #ff80ab 60%, #302b63 100%);
     text-align: center;
-    padding: 24px 0;
-    border-radius: 18px 18px 0 0;
-    box-shadow: 0 -2px 12px rgba(255, 128, 171, 0.12);
-    margin-top: 40px;
-    font-size: 1.1rem;
+    padding: 28px 0;
+    border-radius: 22px 22px 0 0;
+    box-shadow: 0 -2px 16px #ff80ab22;
+    margin-top: 44px;
+    font-size: 1.13rem;
     color: #fff;
-}
-
-/* Add subtle card hover effect for sections */
-section:hover {
-    box-shadow: 0 6px 32px #ff80ab44, 0 2px 16px rgba(255, 128, 171, 0.12);
-    border-color: #ff80ab99;
-    transition: box-shadow 0.3s, border-color 0.3s;
 }
 
 /* Responsive Design */
 @media (max-width: 700px) {
     section {
-        padding: 24px 8px;
-        margin: 18px 4px;
+        padding: 20px 4px;
+        margin: 12px 2px;
     }
     header h1 {
-        font-size: 2rem;
+        font-size: 2.1rem;
     }
     nav ul li {
-        margin: 0 8px;
+        margin: 0 6px;
     }
     h2 {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
+        padding-left: 8px;
     }
 }
