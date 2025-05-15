@@ -6,21 +6,21 @@ html, body, header, nav, ul, li, h1, h2, p, footer {
 
 /* Global styles */
 body {
-    font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-    background: linear-gradient(120deg, #0f0c29 0%, #302b63 60%, #ff80ab 100%);
-    color: #f5f5f7;
+    font-family: 'Inter', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(120deg, #232526 0%, #414345 40%, #6dd5ed 100%);
+    color: #23272f;
     min-height: 100vh;
     letter-spacing: 0.02em;
     line-height: 1.7;
 }
 
 header {
-    background: linear-gradient(90deg, #ff80ab 60%, #302b63 100%);
-    padding: 36px 0 24px 0;
+    background: linear-gradient(90deg, #6dd5ed 0%, #2193b0 100%);
+    padding: 38px 0 26px 0;
     text-align: center;
     border-radius: 0 0 32px 32px;
-    box-shadow: 0 6px 32px rgba(255, 128, 171, 0.18);
-    margin-bottom: 36px;
+    box-shadow: 0 6px 32px rgba(33, 147, 176, 0.18);
+    margin-bottom: 38px;
     position: sticky;
     top: 0;
     z-index: 10;
@@ -31,7 +31,8 @@ header h1 {
     letter-spacing: 0.09em;
     margin-bottom: 10px;
     font-weight: 800;
-    text-shadow: 0 2px 12px #ff80ab55, 0 1px 0 #fff2;
+    color: #fff;
+    text-shadow: 0 2px 12px #2193b055, 0 1px 0 #fff2;
 }
 
 nav ul {
@@ -51,51 +52,55 @@ nav ul li:hover {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #23272f;
     text-decoration: none;
     font-weight: 700;
     font-size: 1.13rem;
     padding: 7px 18px;
     border-radius: 8px;
     transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-    box-shadow: 0 1px 6px #ff80ab22;
+    box-shadow: 0 1px 6px #6dd5ed22;
+    background: #fff;
+    margin: 0 4px;
 }
 
 nav ul li a:hover {
-    background: #fff;
-    color: #ff80ab;
-    box-shadow: 0 2px 12px #ff80ab55;
+    background: #2193b0;
+    color: #fff;
+    box-shadow: 0 2px 12px #6dd5ed55;
 }
 
 section {
     padding: 44px 28px;
-    background: rgba(24, 24, 36, 0.97);
+    background: rgba(255,255,255,0.97);
     margin: 36px auto;
     border-radius: 22px;
-    box-shadow: 0 4px 24px #ff80ab22, 0 2px 16px #302b6344;
+    box-shadow: 0 4px 24px #6dd5ed22, 0 2px 16px #2193b044;
     max-width: 950px;
-    border: 1.5px solid #ff80ab44;
+    border: 1.5px solid #6dd5ed44;
     transition: box-shadow 0.3s, border-color 0.3s;
 }
 
 section:hover {
-    box-shadow: 0 8px 40px #ff80ab55, 0 2px 16px #302b6388;
-    border-color: #ff80abcc;
+    box-shadow: 0 8px 40px #6dd5ed55, 0 2px 16px #2193b088;
+    border-color: #2193b0cc;
 }
 
 h2 {
     margin-bottom: 20px;
-    color: #ff80ab;
+    color: #2193b0;
     font-size: 2.1rem;
     font-weight: 800;
     letter-spacing: 0.045em;
-    text-shadow: 0 2px 10px #ff80ab33, 0 1px 0 #fff2;
-    border-left: 5px solid #ff80ab;
+    text-shadow: 0 2px 10px #6dd5ed33, 0 1px 0 #fff2;
+    border-left: 5px solid #6dd5ed;
     padding-left: 16px;
+    background: linear-gradient(90deg, #6dd5ed 0%, #fff 100%);
+    border-radius: 6px;
 }
 
 h3 {
-    color: #fff;
+    color: #23272f;
     font-size: 1.25rem;
     margin-bottom: 7px;
     font-weight: 700;
@@ -121,15 +126,15 @@ li {
 
 p, li {
     font-size: 1.09rem;
-    color: #eaeaf0;
+    color: #23272f;
 }
 
 footer {
-    background: linear-gradient(90deg, #ff80ab 60%, #302b63 100%);
+    background: linear-gradient(90deg, #6dd5ed 0%, #2193b0 100%);
     text-align: center;
     padding: 28px 0;
     border-radius: 22px 22px 0 0;
-    box-shadow: 0 -2px 16px #ff80ab22;
+    box-shadow: 0 -2px 16px #6dd5ed22;
     margin-top: 44px;
     font-size: 1.13rem;
     color: #fff;
