@@ -1,817 +1,770 @@
 <!doctype html>
-<html lang="en" data-theme="warning" data-mode="dark">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>ML Engineer</title>
-        <meta name="description" content="" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Inter:wght@400;600;700&family=Poppins:wght@400;600;700&family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600;700&family=Fira+Code:wght@400;500;700&family=JetBrains+Mono:wght@400;600;700&family=Source+Code+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-        <link
-            rel="shortcut icon"
-            href="/assets/logo.png"
-            type="image/png"
-        />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-
-        <!-- Open Graph / Facebook -->
-        <meta property="og:title" content="Title of the project" />
-        <meta property="og:description" content="" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://github.com/PaulleDemon" />
-        <!--Replace with the current website url-->
-        <meta property="og:image" content="" />
-
-        <!-- <link rel="stylesheet" href="../../tailwind-css/tailwind-runtime.css"> -->
-        <link rel="stylesheet" href="./css/tailwind-build.css" />
-        <link rel="stylesheet" href="css/index.css" />
-        <style>
-            :root {
-                font-family: 'Inter', 'Roboto', 'Open Sans', 'Noto Sans JP', sans-serif;
-                --space-blue: #1976d2;
-                --cyberpunk-pink: #ff2e9a;
-                --cyberpunk-cyan: #00fff7;
-                --cyberpunk-purple: #a259ff;
-                --cyberpunk-yellow: #ffe156;
-                --cyberpunk-bg: linear-gradient(120deg, #0f2027 0%, #2c5364 40%, #1a0033 100%);
-                --cyberpunk-glow: 0 0 8px var(--cyberpunk-cyan), 0 0 16px var(--cyberpunk-pink), 0 0 32px var(--cyberpunk-yellow);
-            }
-            body {
-                background: #000000 !important;
-                color: #ffffff !important;
-                overflow: hidden;
-                background-image: var(--cyberpunk-bg), url('./assets/images/home/bg.jpg');
-                background-blend-mode: lighten, screen;
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-attachment: fixed;
-                background-position: center center;
-                position: relative;
-            }
-            body::before {
-                content: '';
-                position: fixed;
-                top: 0; left: 0; right: 0; bottom: 0;
-                pointer-events: none;
-                background: repeating-linear-gradient(135deg, rgba(255,46,154,0.12) 0 2px, transparent 2px 12px), repeating-linear-gradient(45deg, rgba(0,255,247,0.10) 0 2px, transparent 2px 12px), radial-gradient(circle at 80% 20%, rgba(255,46,154,0.15) 0 200px, transparent 300px), radial-gradient(circle at 20% 80%, rgba(0,255,247,0.12) 0 200px, transparent 300px);
-                z-index: 0;
-                animation: cyberpunk-bg-move 18s linear infinite alternate;
-            }
-            @keyframes cyberpunk-bg-move {
-                0% { background-position: 0 0, 0 0, 80% 20%, 20% 80%; }
-                100% { background-position: 100px 200px, 200px 100px, 85% 25%, 25% 85%; }
-            }
-            body::after {
-                content: '';
-                position: fixed;
-                top: 0; left: 0; right: 0; bottom: 0;
-                pointer-events: none;
-                background: linear-gradient(90deg, rgba(255,46,154,0.08) 0%, rgba(0,255,247,0.08) 100%);
-                mix-blend-mode: lighten;
-                z-index: 1;
-            }
-            /* Headings and titles in cyberpunk neon */
-            h1, h2, h3, .tw-text-primary, .tw-font-semibold, .tw-text-2xl, .tw-text-3xl, .ml-engineer-heading {
-                font-family: 'Inter', 'Poppins', 'Montserrat', 'Roboto', 'Open Sans', 'Noto Sans JP', sans-serif !important;
-                color: var(--cyberpunk-cyan) !important;
-                text-shadow: 0 0 12px var(--cyberpunk-cyan), 0 0 24px var(--cyberpunk-pink), 0 0 32px var(--cyberpunk-yellow);
-                letter-spacing: 0.08em;
-                font-weight: 700 !important;
-                filter: brightness(1.2) contrast(1.2);
-            }
-            /* Ensure section titles in skills, education, and projects are blue */
-            .tab-content h2,
-            .tab-content h3,
-            .tab-content .tw-text-primary {
-                color: var(--cyberpunk-pink) !important;
-                text-shadow: 0 0 12px var(--cyberpunk-pink), 0 0 24px var(--cyberpunk-cyan), 0 0 32px var(--cyberpunk-yellow);
-                letter-spacing: 0.12em;
-                font-weight: 700 !important;
-                filter: brightness(1.2) contrast(1.2);
-            }
-            /* Body text */
-            body, html, p, div, span, button, a, ul, li, input, select, textarea, label, section, header, main, footer, nav, article, aside, figure, figcaption, blockquote, table, th, td, tr, thead, tbody, tfoot, form, fieldset, legend {
-                font-family: 'Inter', 'Open Sans', 'Roboto', 'Noto Sans JP', sans-serif !important;
-                letter-spacing: 0.04em;
-            }
-            /* Code blocks and inline code */
-            code, pre, .code-block, .tw-code, .tw-pre {
-                font-family: 'Fira Code', 'JetBrains Mono', 'Source Code Pro', 'Menlo', 'Monaco', 'Consolas', monospace !important;
-                font-size: 1em;
-                background: rgba(0,0,0,0.7);
-                color: var(--cyberpunk-yellow);
-                border-radius: 6px;
-                padding: 0.2em 0.5em;
-                letter-spacing: 0.01em;
-            }
-            /* Fix scrolling for tab content */
-            .tab-content {
-                height: auto !important;
-                min-height: 0 !important;
-                overflow-y: auto !important;
-            }
-            .tw-h-\[calc\(100vh-80px\)\] {
-                height: calc(100vh - 80px) !important;
-                overflow-y: auto !important;
-            }
-            .tw-bg-white, .dark\:tw-bg-slate-800 {
-                background: #000000 !important;
-            }
-            .tw-text-black, .tw-text-primary, .tw-border-primary {
-                color: #ffffff !important;
-                border-color: #ffffff !important;
-            }
-            /* Cyberpunk accent for buttons and borders */
-            .btn-primary, .tab-btn.tab-active {
-                background: linear-gradient(90deg, var(--cyberpunk-pink) 0%, var(--cyberpunk-cyan) 100%) !important;
-                color: #fff !important;
-                border-color: var(--cyberpunk-yellow) !important;
-                box-shadow: 0 0 16px var(--cyberpunk-pink), 0 0 32px var(--cyberpunk-cyan);
-                text-shadow: 0 0 8px var(--cyberpunk-yellow);
-                letter-spacing: 0.1em;
-                font-weight: 700;
-                text-transform: uppercase;
-                border-radius: 8px;
-                transition: filter 0.2s, box-shadow 0.2s;
-            }
-            .btn-primary:hover, .tab-btn.tab-active:hover {
-                filter: brightness(1.3) contrast(1.3);
-                box-shadow: 0 0 32px var(--cyberpunk-yellow), 0 0 64px var(--cyberpunk-pink);
-            }
-            .tab-btn {
-                color: var(--cyberpunk-cyan) !important;
-                text-shadow: 0 0 8px var(--cyberpunk-pink);
-                font-weight: 600;
-                border-radius: 6px;
-                transition: filter 0.2s, box-shadow 0.2s;
-            }
-            .tab-btn:hover {
-                filter: brightness(1.2);
-                box-shadow: 0 0 16px var(--cyberpunk-cyan);
-            }
-            .link {
-                color: var(--cyberpunk-pink) !important;
-                text-shadow: 0 0 8px var(--cyberpunk-cyan);
-                font-weight: 600;
-                letter-spacing: 0.08em;
-                transition: color 0.2s, text-shadow 0.2s;
-            }
-            .link:hover {
-                color: var(--cyberpunk-yellow) !important;
-                text-shadow: 0 0 16px var(--cyberpunk-yellow);
-            }
-            .input, select.input {
-                border: 2px solid var(--cyberpunk-cyan) !important;
-                color: #fff !important;
-                background: rgba(0,0,0,0.85) !important;
-                box-shadow: 0 0 16px var(--cyberpunk-pink);
-                border-radius: 6px;
-                font-size: 1.1em;
-                padding: 0.5em 1em;
-                transition: border-color 0.2s, box-shadow 0.2s;
-            }
-            .input:focus, select.input:focus {
-                border-color: var(--cyberpunk-yellow) !important;
-                box-shadow: 0 0 32px var(--cyberpunk-yellow);
-            }
-            .tw-shadow-xl, .lg\:tw-shadow-xl {
-                box-shadow: 0 4px 32px 0 var(--cyberpunk-purple) !important;
-            }
-            .tw-text-gray-800, .dark\:tw-text-gray-300, .tw-text-gray-500, .tw-text-gray-700 {
-                color: var(--cyberpunk-cyan) !important;
-                text-shadow: 0 0 8px var(--cyberpunk-pink);
-            }
-            .tw-border-2 {
-                border-width: 2px !important;
-                border-color: var(--cyberpunk-pink) !important;
-                box-shadow: 0 0 8px var(--cyberpunk-cyan);
-            }
-            /* Neon border for profile image */
-            .tw-h-\[26px\].tw-w-\[26px\].tw-overflow-hidden.tw-rounded-full, .tw-h-\[26px\].tw-w-\[26px\].tw-overflow-hidden.tw-rounded-full img {
-                box-shadow: 0 0 16px 2px var(--cyberpunk-cyan), 0 0 24px 4px var(--cyberpunk-pink), 0 0 16px 4px var(--cyberpunk-yellow);
-                border: 2px solid var(--cyberpunk-pink) !important;
-                animation: neon-flicker 4s infinite alternate;
-            }
-            @keyframes neon-flicker {
-                0%, 100% { filter: brightness(1.1); }
-                45% { filter: brightness(1.2); }
-                50% { filter: brightness(0.9); }
-                55% { filter: brightness(1.3); }
-                60% { filter: brightness(1.05); }
-            }
-            /* Japanese cyberpunk anime background overlay */
-            /* Already handled in body::before and body::after */
-            /* Japanese font accent for greetings */
-            .cyberpunk-jp {
-                font-family: 'Roboto', 'Noto Sans JP', sans-serif !important;
-                font-size: 2.8rem;
-                color: var(--cyberpunk-yellow) !important;
-                letter-spacing: 0.18em;
-                text-shadow: 0 0 18px var(--cyberpunk-cyan), 0 0 32px var(--cyberpunk-pink), 0 0 20px var(--cyberpunk-yellow);
-                margin-bottom: 1.5rem;
-                font-weight: 900;
-                filter: brightness(1.3) contrast(1.3);
-                animation: cyberpunk-jp-glow 3.5s infinite alternate;
-            }
-            @keyframes cyberpunk-jp-glow {
-                0%, 100% { text-shadow: 0 0 18px var(--cyberpunk-cyan), 0 0 32px var(--cyberpunk-pink), 0 0 20px var(--cyberpunk-yellow); }
-                50% { text-shadow: 0 0 32px var(--cyberpunk-yellow), 0 0 48px var(--cyberpunk-pink), 0 0 32px var(--cyberpunk-cyan); }
-            }
-            /* Animated scanlines overlay */
-            body::after {
-                background: repeating-linear-gradient(180deg, rgba(255,255,255,0.04) 0 2px, transparent 2px 6px);
-                mix-blend-mode: lighten;
-                opacity: 0.5;
-                animation: scanlines-move 2.5s linear infinite;
-            }
-            @keyframes scanlines-move {
-                0% { background-position-y: 0; }
-                100% { background-position-y: 8px; }
-            }
-            /* Seizure warning modal styles */
-            #seizure-modal {
-                position: fixed;
-                z-index: 10000;
-                top: 0;
-                left: 0;
-                width: 100vw;
-                height: 100vh;
-                background: #000;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                transition: opacity 0.5s;
-            }
-            #seizure-modal > div {
-                max-width: 90vw;
-                min-width: 320px;
-                padding: 2.5rem 2.2rem 2.2rem 2.2rem;
-                background: rgba(10,10,10,0.98);
-                border-radius: 18px;
-                box-shadow: 0 0 32px var(--cyberpunk-pink), 0 0 64px var(--cyberpunk-cyan);
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 2rem;
-            }
-            #seizure-modal .warning-text {
-                font-family: 'Roboto', 'Noto Sans JP', sans-serif;
-                font-size: 1.25rem;
-                color: var(--cyberpunk-yellow);
-                text-shadow: 0 0 18px var(--cyberpunk-cyan), 0 0 32px var(--cyberpunk-pink), 0 0 20px var(--cyberpunk-yellow);
-                font-weight: 900;
-                letter-spacing: 0.12em;
-                text-align: center;
-            }
-            #close-seizure-modal {
-                font-family: 'Roboto', 'Noto Sans JP', sans-serif;
-                font-size: 1.1rem;
-                padding: 0.7em 2.2em;
-                background: linear-gradient(90deg, var(--cyberpunk-pink), var(--cyberpunk-cyan));
-                color: #fff;
-                border: none;
-                border-radius: 8px;
-                box-shadow: 0 0 16px var(--cyberpunk-pink), 0 0 32px var(--cyberpunk-cyan);
-                text-shadow: 0 0 8px var(--cyberpunk-yellow);
-                font-weight: 700;
-                letter-spacing: 0.1em;
-                cursor: pointer;
-                transition: filter 0.2s, box-shadow 0.2s;
-            }
-            #close-seizure-modal:hover {
-                filter: brightness(1.3) contrast(1.3);
-                box-shadow: 0 0 32px var(--cyberpunk-yellow), 0 0 64px var(--cyberpunk-pink);
-            }
-            /* Neon-styled bullet points for all ul/li, including .tw-list-disc */
-            ul, .tw-list-disc {
-                list-style-type: disc !important;
-                padding-left: 1.5em !important;
-            }
-            li, .tw-list-disc li {
-                color: var(--cyberpunk-yellow) !important;
-                text-shadow: 0 0 8px var(--cyberpunk-cyan), 0 0 12px var(--cyberpunk-pink);
-                font-size: 1.05em;
-                margin-bottom: 0.4em;
-                position: relative;
-            }
-            ul, ol {
-                margin-bottom: 1.2em;
-            }
-            ul li::marker, .tw-list-disc li::marker {
-                color: var(--cyberpunk-pink);
-                text-shadow: 0 0 8px var(--cyberpunk-cyan), 0 0 12px var(--cyberpunk-yellow);
-                font-size: 1.2em;
-            }
-            /* Modal fade-out animation */
-            #seizure-modal.fade-out {
-                opacity: 0;
-                pointer-events: none;
-                transition: opacity 0.5s;
-            }
-        </style>
-    </head>
-    <body
-        class="tw-flex tw-w-full tw-flex-col tw-bg-[#fff] tw-text-black dark:tw-bg-slate-800 dark:tw-text-white tw-h-screen"
-        style="overflow: hidden;"
-    >
-        <!-- Seizure and Epilepsy warning modal overlay -->
-        <div id="seizure-modal" style="position:fixed;z-index:10000;top:0;left:0;width:100vw;height:100vh;background:#000;display:flex;align-items:center;justify-content:center;transition:opacity 0.5s;">
-            <div style="max-width:90vw;min-width:320px;padding:2.5rem 2.2rem 2.2rem 2.2rem;background:rgba(10,10,10,0.98);border-radius:18px;box-shadow:0 0 32px var(--cyberpunk-pink),0 0 64px var(--cyberpunk-cyan);display:flex;flex-direction:column;align-items:center;gap:2rem;">
-                <div class="warning-text" style="font-size:1.25rem;color:var(--cyberpunk-yellow);text-shadow:0 0 18px var(--cyberpunk-cyan),0 0 32px var(--cyberpunk-pink),0 0 20px var(--cyberpunk-yellow);font-weight:900;letter-spacing:0.12em;text-align:center;">
-                    ⚠️ Seizure and Epilepsy Warning<br>
-                    This site contains animated flashing lights and neon effects.<br>
-                    If you are sensitive to such visuals, including those with epilepsy, please proceed with caution.
-                </div>
-                <button id="close-seizure-modal" style="font-size:1.1rem;padding:0.7em 2.2em;background:linear-gradient(90deg,var(--cyberpunk-pink),var(--cyberpunk-cyan));color:#fff;border:none;border-radius:8px;box-shadow:0 0 16px var(--cyberpunk-pink),0 0 32px var(--cyberpunk-cyan);text-shadow:0 0 8px var(--cyberpunk-yellow);font-weight:700;letter-spacing:0.1em;cursor:pointer;transition:filter 0.2s,box-shadow 0.2s;">
-                    Enter Site
-                </button>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parikshit Kumar | ML Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <style>
+    :root {
+      --primary-blue: #1bc6c4;
+      --timeline-dot: #1bc6c4;
+      --timeline-line: #1bc6c4;
+      --card-bg: #181818;
+      --text-main: #fff;
+      --text-muted: #b0b0b0;
+      --bg-main: #000;
+    }
+    html, body {
+      background: var(--bg-main);
+      color: var(--text-main);
+      font-family: 'Inter', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      width: 100vw;
+    }
+    h1, h2, h3, h4, h5, h6, .tw-text-primary { color: var(--primary-blue); margin: 0; }
+    a, .link { color: var(--primary-blue); text-decoration: none; }
+    a:hover, .link:hover { text-decoration: underline; }
+    .tab-btn {
+      background: none; border: none; color: var(--primary-blue); font-size: 1.1em; font-weight: 600; cursor: pointer; padding: 0.5em 1.2em; border-radius: 6px; transition: background 0.2s;
+    }
+    .tab-btn.active, .tab-btn:focus { background: #181818; color: var(--primary-blue); outline: none; }
+    .timeline-dot { background: var(--timeline-dot); box-shadow: 0 2px 8px 0 var(--timeline-dot); }
+    .timeline-content.card h3, .skill-card strong {
+      color: var(--primary-blue);
+    }
+    .section-card h3, .section-card strong {
+      color: var(--primary-blue);
+    }
+    .skills-grid .skill-card strong { color: var(--primary-blue); }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+    .sidebar {
+      display: flex; flex-direction: column; align-items: center; padding: 2.5rem 0 1.5rem 0;
+    }
+    .profile-img {
+      width: 158px; height: 158px; border-radius: 50%; overflow: hidden; margin-bottom: 1.2rem;
+      border: 2.5px solid var(--primary-blue); box-shadow: 0 2px 12px 0 var(--primary-blue);
+      background: #222;
+    }
+    .profile-img img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+    .name { font-size: 2rem; font-weight: 700; margin-bottom: 0.2em; }
+    .subtitle { color: var(--primary-blue); font-size: 1.1rem; margin-bottom: 1.2em; }
+    .socials { display: flex; gap: 2em; font-size: 2.4em; margin-bottom: 1.5em; }
+    .main-content { background: var(--bg-main); color: var(--text-main); border-radius: 16px; box-shadow: 0 2px 24px 0 #111; padding: 2.5rem 2rem; margin-bottom: 2.5rem; }
+    .tabs { display: flex; gap: 1.5em; margin-bottom: 2.5rem; justify-content:center; }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+    /* Timeline styles */
+    .timeline-container { width: 100%; max-width: 900px; margin: 0 auto; padding: 1.5em 0; }
+    .timeline { position: relative; margin-left: 2em; padding-left: 2em; border-left: 3px solid var(--timeline-line); }
+    .timeline-event { position: relative; margin-bottom: 2.5em; }
+    .timeline-dot { position: absolute; left: -2.2em; top: 0.5em; width: 1.2em; height: 1.2em; background: var(--timeline-dot); border-radius: 50%; border: none; box-shadow: 0 2px 8px 0 var(--timeline-dot); }
+    .timeline-content.card, .skill-card {
+      color: var(--text-main);
+      font-size: 1.05em;
+      background: #181818;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px 0 #111;
+      border: 1.5px solid var(--primary-blue);
+    }
+    .timeline-content.card h3, .skill-card strong {
+      color: var(--primary-blue);
+    }
+    .timeline-content.card p, .timeline-content.card ul, .skill-card ul, .skill-card span {
+      color: var(--text-muted);
+      font-size: 1em;
+    }
+    /* Parallax background effect */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0; width: 100vw; height: 100vh;
+      z-index: -2;
+      background: radial-gradient(ellipse at 60% 20%, rgba(27,198,196,0.10) 0%, rgba(0,0,0,0.0) 70%),
+                  radial-gradient(ellipse at 20% 80%, rgba(27,198,196,0.08) 0%, rgba(0,0,0,0.0) 70%);
+      background-attachment: fixed;
+      transition: background-position 0.3s;
+      pointer-events: none;
+    }
+    /* Subtle animated accent for headings and timeline dots */
+    .tw-text-primary, .timeline-dot, .tag {
+      position: relative;
+      animation: accentGlow 3.5s ease-in-out infinite alternate;
+    }
+    @keyframes accentGlow {
+      0% { filter: drop-shadow(0 0 0px #1bc6c4); }
+      100% { filter: drop-shadow(0 0 8px #1bc6c4); }
+    }
+    /* Microinteractions for social icons and project cards */
+    .socials a {
+      transition: transform 0.18s, box-shadow 0.18s;
+    }
+    .socials a:hover {
+      transform: scale(1.13) translateY(-2px);
+      box-shadow: 0 4px 18px 0 #1bc6c4;
+      background: rgba(27,198,196,0.08);
+      border-radius: 10px;
+    }
+    .section-card {
+      transition: box-shadow 0.18s, transform 0.18s;
+    }
+    .section-card:hover {
+      box-shadow: 0 4px 32px 0 #1bc6c4;
+      transform: translateY(-3px) scale(1.012);
+      border-color: #1bc6c4;
+    }
+    /* Tab underline animation */
+    .tab-btn {
+      position: relative;
+      overflow: hidden;
+    }
+    .tab-btn::after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 0;
+      height: 2.5px;
+      background: linear-gradient(90deg, #1bc6c4 60%, #fff 100%);
+      border-radius: 2px;
+      transition: width 0.3s, left 0.3s;
+    }
+    .tab-btn.active::after, .tab-btn:hover::after {
+      width: 80%;
+      left: 10%;
+    }
+    /* Custom section divider */
+    .section-divider {
+      width: 100%;
+      height: 18px;
+      margin: 2.5em 0 2em 0;
+      background: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .section-divider svg {
+      width: 90px; height: 18px;
+      display: block;
+    }
+    /* Timeline pulse for most recent event */
+    .timeline-event.recent .timeline-dot {
+      animation: pulseDot 1.5s infinite alternate;
+    }
+    @keyframes pulseDot {
+      0% { box-shadow: 0 0 0 0 #1bc6c4; }
+      100% { box-shadow: 0 0 16px 6px #1bc6c4; }
+    }
+    /* Footer sun and coffee emoji animation */
+    .footer-emoji {
+      display: inline-block;
+      animation: footerBounce 2.5s infinite alternate;
+      will-change: transform;
+    }
+    @keyframes footerBounce {
+      0% { transform: translateY(0) scale(1); filter: brightness(1); }
+      100% { transform: translateY(-5px) scale(1.08); filter: brightness(1.2); }
+    }
+    /* Custom cyan-glow cursor */
+    body, html {
+      cursor: none;
+    }
+    .custom-cursor {
+      position: fixed;
+      top: 0; left: 0;
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      background: rgba(27,198,196,0.85);
+      box-shadow: 0 0 8px 2px #1bc6c4, 0 0 0 2px #1bc6c4 inset;
+      pointer-events: none;
+      z-index: 99999;
+      mix-blend-mode: lighten;
+      transition: none;
+      opacity: 0.92;
+    }
+    .custom-cursor.cursor-hover {
+      transform: scale(1.4);
+      opacity: 1;
+      box-shadow: 0 0 16px 4px #1bc6c4, 0 0 0 2px #1bc6c4 inset;
+    }
+    @media (max-width: 700px) {
+      .container { padding: 0 0.2rem; }
+      .sidebar { padding: 1.2rem 0 1rem 0; }
+      .profile-img { width: 90px !important; height: 90px !important; }
+      .name { font-size: 1.3rem; }
+      .subtitle { font-size: 0.95rem; margin-bottom: 0.8em; }
+      .socials { font-size: 1.3em !important; gap: 1em !important; margin-bottom: 1em; }
+      .main-content { padding: 1.2rem 0.5rem; border-radius: 10px; }
+      .tabs { flex-wrap: wrap; gap: 0.7em; font-size: 0.95em; }
+      .tab-btn { font-size: 1em; padding: 0.4em 0.7em; }
+      .skills-grid { grid-template-columns: 1fr; gap: 0.7em; }
+      .skill-card { font-size: 0.98em; padding: 0.7em 0.7em; }
+      .timeline-container { padding: 0.5em 0; }
+      .timeline { margin-left: 0.2em; padding-left: 0.7em; }
+      .timeline-content.card { padding: 0.7em; }
+      h2, h3 { font-size: 1.1em; }
+      /* Horizontal timeline for mobile */
+      .timeline-container { overflow-x: auto; }
+      .timeline { border-left: none; border-top: 3px solid var(--timeline-line); margin-left: 0; padding-left: 0; display: flex; flex-direction: row; gap: 1.5em; padding-top: 2em; padding-bottom: 1.5em; }
+      .timeline-event { min-width: 260px; margin-bottom: 0; margin-right: 0.5em; position: relative; }
+      .timeline-dot { left: 50%; top: -2.2em; transform: translateX(-50%); position: absolute; }
+      .timeline-content.card { margin-top: 1.7em; }
+    }
+    /* Skills grid */
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.2em; margin-top: 1.2em; }
+    .skill-card { background: #181818; border-radius: 10px; border: 1.5px solid #222; padding: 1em 1em; color: #fff; font-size: 1.05em; box-shadow: 0 2px 8px 0 #111; }
+    .skill-card strong { color: var(--primary-blue); }
+    .project-tags { display: flex; flex-wrap: wrap; gap: 0.7em; margin-top: 0.7em; }
+    .tag {
+      background: rgba(27, 198, 196, 0.1);
+      color: var(--primary-blue);
+      padding: 0.4em 0.8em;
+      border-radius: 12px;
+      font-size: 0.9em;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    /* Parallax effect for project cards */
+    .section-card.project-parallax {
+      perspective: 900px;
+      will-change: transform;
+      transition: box-shadow 0.18s, transform 0.18s;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <div class="profile-img" style="width: 158px; height: 158px;">
+        <img src="./assets/logo.png" alt="Parikshit Kumar" />
+      </div>
+      <div class="name">Parikshit Kumar</div>
+      <div class="subtitle">Machine Learning | Generative AI | Computer Vision | Data Science</div>
+      <div class="socials" style="font-size:2.4em; gap:2em;">
+        <a href="https://github.com/parikshitkumar1" class="link" title="GitHub" target="_blank" style="display:flex; flex-direction:column; align-items:center;">
+          <i class="bi bi-github"></i>
+          <span style="font-size:0.35em; color:var(--text-muted); margin-top:0.1em;">GitHub</span>
+        </a>
+        <a href="https://www.linkedin.com/in/parikshitkumar1" class="link" title="LinkedIn" target="_blank" style="display:flex; flex-direction:column; align-items:center;">
+          <i class="bi bi-linkedin"></i>
+          <span style="font-size:0.35em; color:var(--text-muted); margin-top:0.1em;">LinkedIn</span>
+        </a>
+        <a href="mailto:mr.kumar.parikshit@gmail.com" class="link" title="Email" style="display:flex; flex-direction:column; align-items:center;">
+          <i class="bi bi-envelope-at-fill"></i>
+          <span style="font-size:0.35em; color:var(--text-muted); margin-top:0.1em;">Email</span>
+        </a>
+        <a href="https://drive.google.com/file/d/1QddFLxtug6JCPMqiOxnJDYP40Grbsc_6/view?usp=sharing" class="link" title="Resume" target="_blank" style="display:flex; flex-direction:column; align-items:center;">
+          <i class="bi bi-file-earmark-text-fill"></i>
+          <span style="font-size:0.35em; color:var(--text-muted); margin-top:0.1em;">Resume</span>
+        </a>
+      </div>
+    </div>
+    <div class="main-content">
+      <div class="section-divider">
+        <svg viewBox="0 0 90 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2 9 Q22 2 45 9 T88 9" stroke="#1bc6c4" stroke-width="2.5" fill="none" opacity="0.7"/>
+        </svg>
+      </div>
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="about">About</button>
+        <button class="tab-btn" data-tab="skills">Skills</button>
+        <button class="tab-btn" data-tab="experience">Experience</button>
+        <button class="tab-btn" data-tab="projects">Projects & Papers</button>
+        <button class="tab-btn" data-tab="education">Education</button>
+      </div>
+      <div class="tab-content active" id="about">
+        <h2 class="tw-text-3xl tw-font-semibold tw-text-primary" style="text-align:center;">About Me</h2>
+        <p style="margin:1.2em auto;max-width:700px;line-height:1.7;text-align:center;">
+          I enjoy building things that work—especially when they involve data, code, and a bit of creativity. My background is rooted in machine learning, generative AI, and computer vision, with hands-on experience in both research and engineering. I value clarity, thoughtful design, and practical solutions. Whether collaborating on a new idea or refining a complex system, I bring focus, curiosity, and a steady approach to my work.
+        </p>
+      </div>
+      <div class="tab-content" id="skills">
+        <h2 class="tw-text-3xl tw-font-semibold tw-text-primary" style="text-align:center;">Skills</h2>
+        <div style="height:2.5em;"></div>
+        <div style="display:flex; flex-direction:column; align-items:center; width:100%;">
+          <div style="width:100%; max-width:900px;">
+            <div style="text-align:center; font-weight:600; color:var(--primary-blue); font-size:1.2em; margin-bottom:1.2em;">Technical Skills</div>
+            <div class="skills-grid" style="margin-bottom:3em;">
+              <div class="skill-card"><strong>Deep Learning</strong></div>
+              <div class="skill-card"><strong>NLP</strong></div>
+              <div class="skill-card"><strong>LLMs</strong></div>
+              <div class="skill-card"><strong>Computer Vision</strong></div>
+              <div class="skill-card"><strong>Generative Modeling</strong></div>
+              <div class="skill-card"><strong>Diffusion Models</strong></div>
+              <div class="skill-card"><strong>Machine Learning</strong></div>
+              <div class="skill-card"><strong>Reinforcement Learning</strong></div>
+              <div class="skill-card"><strong>Data Analysis</strong></div>
+              <div class="skill-card"><strong>Data Visualization</strong></div>
+              <div class="skill-card"><strong>Statistics</strong></div>
+              <div class="skill-card"><strong>Graph Neural Networks</strong></div>
             </div>
-            <div class="update-note" style="position:absolute;bottom:2.5vh;left:0;width:100vw;text-align:center;font-size:1.05rem;color:var(--cyberpunk-cyan);text-shadow:0 0 8px var(--cyberpunk-pink),0 0 12px var(--cyberpunk-yellow);letter-spacing:0.08em;pointer-events:none;user-select:none;">
-                Updated: June 2025
+            <div style="height:2.5em;"></div>
+            <div style="text-align:center; font-weight:600; color:var(--primary-blue); font-size:1.2em; margin-bottom:1.2em;">Platforms & Tools</div>
+            <div class="skills-grid">
+              <div class="skill-card"><strong>Python</strong></div>
+              <div class="skill-card"><strong>C++</strong></div>
+              <div class="skill-card"><strong>C</strong></div>
+              <div class="skill-card"><strong>Keras</strong></div>
+              <div class="skill-card"><strong>TensorFlow</strong></div>
+              <div class="skill-card"><strong>PyTorch</strong></div>
+              <div class="skill-card"><strong>PyTorch Lightning</strong></div>
+              <div class="skill-card"><strong>FastAI</strong></div>
+              <div class="skill-card"><strong>OpenCV</strong></div>
+              <div class="skill-card"><strong>Numpy</strong></div>
+              <div class="skill-card"><strong>Matplotlib</strong></div>
+              <div class="skill-card"><strong>Pandas</strong></div>
+              <div class="skill-card"><strong>Hugging Face</strong></div>
+              <div class="skill-card"><strong>SQL</strong></div>
+              <div class="skill-card"><strong>Flask</strong></div>
+              <div class="skill-card"><strong>BeautifulSoup</strong></div>
+              <div class="skill-card"><strong>XGBoost</strong></div>
+              <div class="skill-card"><strong>Tableau</strong></div>
+              <div class="skill-card"><strong>MLOps</strong></div>
+              <div class="skill-card"><strong>GCP</strong></div>
+              <div class="skill-card"><strong>AWS</strong></div>
+              <div class="skill-card"><strong>Kubernetes</strong></div>
+              <div class="skill-card"><strong>Docker</strong></div>
+              <div class="skill-card"><strong>Git CLI</strong></div>
+              <div class="skill-card"><strong>Jupyter Notebooks</strong></div>
+              <div class="skill-card"><strong>Anaconda</strong></div>
+              <div class="skill-card"><strong>Linux Terminal</strong></div>
+              <div class="skill-card"><strong>ROS</strong></div>
+              <div class="skill-card"><strong>CUDA</strong></div>
+              <div class="skill-card"><strong>MPS (Apple)</strong></div>
+              <div class="skill-card"><strong>Apache Spark</strong></div>
+              <div class="skill-card"><strong>Tensorboard</strong></div>
+              <div class="skill-card"><strong>Firebase</strong></div>
+              <div class="skill-card"><strong>MS Azure</strong></div>
             </div>
+          </div>
         </div>
-
-        <main
-            class="tw-flex tw-w-full tw-h-full tw-overflow-hidden max-lg:tw-flex-col"
-        >
-            <section
-                class="tw-flex tw-h-auto tw-w-[450px] tw-flex-col tw-place-items-center tw-gap-4 tw-p-4 max-lg:tw-w-full lg:tw-shadow-xl lg:dark:tw-shadow-gray-600"
-            >
-                <!-- sidebar -->
-                <div
-
-                class="tw-h-[26px] tw-w-[26px] tw-overflow-hidden tw-rounded-full"
-                >
-                    <img
-                        src="./assets/logo.png"
-                        class="tw-h-full tw-w-full tw-object-cover tw-rounded-full"
-                        alt="Parikshit Kumar"
-                        srcset=""
-                    />
-                </div>
-
-                <h1 class="tw-text-3xl tw-font-semibold">Parikshit Kumar</h1>
-                <div class="cyberpunk-jp" style="font-size:1.3rem; margin-bottom:0.5rem;">パリクシット・クマール</div>
-
-                <p
-                    class="tw-mt-6 tw-max-w-[350px] tw-text-center tw-text-primary"
-                >
-                    Machine Learning & Computer Vision | Data Science | Building useful AI for real-world impact
-                </p>
-
-                <div class="tw-mt-5 tw-flex tw-gap-5 tw-text-2xl">
-                    <a href="https://github.com/parikshitkumar1" class="link" title="GitHub" target="_blank" rel="noopener noreferrer">
-                        <i class="bi bi-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/parikshitkumar1" class="link" title="LinkedIn" target="_blank" rel="noopener noreferrer">
-                        <i class="bi bi-linkedin"></i>
-                    </a>
-                    <a href="mailto:mr.kumar.parikshit@gmail.com" class="link" title="Email">
-                        <i class="bi bi-envelope-at-fill"></i>
-                    </a>
-                    <a href="https://drive.google.com/file/d/1QddFLxtug6JCPMqiOxnJDYP40Grbsc_6/view?usp=sharing" class="link" title="Resume" target="_blank" rel="noopener noreferrer">
-                        <i class="bi bi-file-earmark-text-fill"></i>
-                    </a>
-                </div>
-            </section>
-
-            <div class="tw-h-full tw-w-full tw-overflow-hidden">
-                <header
-                    class="tw-relative tw-flex tw-w-full tw-overflow-hidden tw-p-2 max-lg:tw-h-[150px] max-lg:tw-flex-col lg:tw-h-[80px]"
-                >
-                    <!-- tabs section -->
-                    <div
-                        class="tw-absolute tw-left-[50%] tw-top-4 tw-flex tw-h-[60px] tw-translate-x-[-50%] tw-gap-4 tw-overflow-x-auto tw-rounded-md tw-border-2 tw-border-primary tw-p-1 tw-px-4 max-md:tw-w-full md:tw-w-fit"
-                    >
-                        <button
-                            class="tab-btn tab-active"
-                            onclick="openTab(event, 'about')"
-                        >
-                            About
-                        </button>
-                        <button
-                            class="tab-btn"
-                            onclick="openTab(event, 'skills')"
-                        >
-                            Skills
-                        </button>
-                        <button
-                            class="tab-btn"
-                            onclick="openTab(event, 'experience')"
-                        >
-                            Experience
-                        </button>
-                        <button
-                            class="tab-btn"
-                            onclick="openTab(event, 'projects')"
-                        >
-                            Projects
-                        </button>
-                        <button
-                            class="tab-btn"
-                            onclick="openTab(event, 'organizations')"
-                        >
-                            Organizations
-                        </button>
-                        <button
-                            class="tab-btn"
-                            onclick="openTab(event, 'education')"
-                        >
-                            Education
-                        </button>
-                    </div>
-
-                    <div
-                        class="tw-m-2 tw-ml-auto tw-flex tw-place-items-center tw-gap-2 max-lg:tw-mt-auto"
-                    >
-                        <select
-                            onchange="switchTheme()"
-                            id="theme-selector"
-                            class="input !tw-h-fit !tw-p-1 tw-text-black dark:tw-text-white"
-                        >
-                            <option value="primary">Primary</option>
-                            <option value="warning" selected>warning</option>
-                            <option value="success">success</option>
-                        </select>
-
-                        <button class="tw-w-[30px]" onclick="toggleMode()">
-                            <i class="bi bi-sun-fill" id="toggle-mode-icon"></i>
-                        </button>
-                    </div>
-                </header>
-
-                <!-- tab contents -->
-                <div class="tw-h-[calc(100vh-80px)] tw-overflow-y-auto">
-                    <div class="tw-min-h-full">
-                        <section
-                            class="tab-content tw-relative tw-flex tw-w-full tw-flex-col max-lg:tw-p-4"
-                            data-tab-name="about"
-                        >
-                            <div
-                                class="tw-flex tw-h-full tw-w-full tw-place-content-center tw-gap-6 tw-p-[5%] max-xl:tw-place-items-center max-lg:tw-flex-col"
-                            >
-                                <div class="tw-flex tw-flex-col tw-place-content-center">
-                                    <div class="tw-text-3xl tw-font-semibold tw-leading-[40px] max-lg:tw-text-xl max-md:tw-leading-snug tw-text-primary cyberpunk-jp">
-                                        こんにちは
-                                    </div>
-                                    <div class="tw-mt-4 tw-max-w-[650px] tw-p-2 tw-text-justify max-lg:tw-max-w-full about-cyberpunk" style="font-size:1.3em;line-height:1.7;position:relative;">
-                                        <p>
-                                            I am a computer vision and machine learning specialist with an M.S. in Computer Science from UC Riverside (Dec 2024). My work bridges advanced research and practical AI deployment, with a focus on deep learning, biological feature extraction, and real-world computer vision systems. At UC Riverside's tribe Lab, I led and contributed to projects in image analysis, classification, and interdisciplinary scientific collaboration. My approach combines rigorous academic foundations with hands-on experience, delivering innovative, production-ready solutions in AI and data science.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <section
-                            class="tab-content tw-relative tw-flex tw-hidden tw-w-full tw-flex-col tw-overflow-y-auto max-lg:tw-p-4"
-                            data-tab-name="skills"
-                        >
-                            <div class="tw-flex tw-h-full tw-w-full tw-flex-col tw-gap-6 tw-p-[5%] max-lg:tw-px-[10%] max-md:tw-px-2">
-                                <div>
-                                    <h3 class="tw-text-2xl tw-font-semibold tw-text-primary tw-mb-4">Technical Skills</h3>
-                                    <div class="tw-mt-2 tw-grid tw-grid-cols-3 tw-gap-x-6 tw-gap-y-2 max-md:tw-grid-cols-2">
-                                        <p>Deep Learning</p>
-                                        <p>NLP</p>
-                                        <p>LLMs</p>
-                                        <p>Computer Vision</p>
-                                        <p>Generative Modeling</p>
-                                        <p>Diffusion Models</p>
-                                        <p>Machine Learning</p>
-                                        <p>Reinforcement Learning</p>
-                                        <p>Data Analysis</p>
-                                        <p>Data Visualization</p>
-                                        <p>Statistics</p>
-                                        <p>Python</p>
-                                        <p>C++</p>
-                                        <p>C</p>
-                                        <p>Keras</p>
-                                        <p>TensorFlow</p>
-                                        <p>PyTorch</p>
-                                        <p>PyTorch Lightning</p>
-                                        <p>FastAI</p>
-                                        <p>OpenCV</p>
-                                        <p>Numpy</p>
-                                        <p>Matplotlib</p>
-                                        <p>Pandas</p>
-                                        <p>Hugging Face</p>
-                                        <p>SQL</p>
-                                        <p>Flask</p>
-                                        <p>BeautifulSoup</p>
-                                        <p>Graph Neural Networks</p>
-                                        <p>XGBoost</p>
-                                    </div>
-                                </div>
-                                <div>
-                                    <h3 class="tw-text-2xl tw-font-semibold tw-text-primary tw-mb-4">Tools & Platforms</h3>
-                                    <div class="tw-mt-2 tw-grid tw-grid-cols-3 tw-gap-x-6 tw-gap-y-2 max-md:tw-grid-cols-2">
-                                        <p>Tableau</p>
-                                        <p>MLOps</p>
-                                        <p>GCP</p>
-                                        <p>AWS</p>
-                                        <p>Kubernetes</p>
-                                        <p>Docker</p>
-                                        <p>Git CLI</p>
-                                        <p>Jupyter Notebooks</p>
-                                        <p>Anaconda</p>
-                                        <p>Linux Terminal</p>
-                                        <p>ROS</p>
-                                        <p>CUDA</p>
-                                        <p>MPS (Apple)</p>
-                                        <p>Apache Spark</p>
-                                        <p>Tensorboard</p>
-                                        <p>Firebase</p>
-                                        <p>MS Azure</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <section
-                            class="tab-content tw-relative tw-flex tw-hidden tw-w-full tw-flex-col tw-overflow-y-auto max-lg:tw-p-4"
-                            data-tab-name="experience"
-                        >
-                            <div class="tw-flex tw-flex-col tw-gap-8 tw-p-[5%] max-lg:tw-px-[2%]">
-                                <div class="tw-mb-8">
-                                    <div class="tw-flex tw-max-w-[650px] tw-flex-col tw-gap-2 tw-p-1">
-                                        <h3 class="tw-text-2xl tw-text-primary">Junior Specialist - University of California, Riverside</h3>
-                                        <p class="tw-text-gray-500 dark:tw-text-gray-200">Feb 2025 – Dec 2025</p>
-                                        <ul class="tw-list-disc">
-                                            <li>Engineered deep learning models for mosquito orientation classification, achieving 96% accuracy across four orientations.</li>
-                                            <li>Utilized advanced image processing techniques—including thresholding, edge detection, and morphological transformations—for robust biological feature extraction.</li>
-                                            <li>Integrated model deployment pipelines with interdisciplinary teams, optimizing end-to-end system performance and scalability.</li>
-                                            <li>Enhanced scalability of feature extraction pipelines, ensuring adaptability for future biological studies.</li>
-                                            <li>Documented research findings and contributed to publications, sharing insights with the scientific community.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="tw-mb-8">
-                                    <div class="tw-flex tw-max-w-[650px] tw-flex-col tw-gap-2 tw-p-1">
-                                        <h3 class="tw-text-2xl tw-text-primary">Student Assistant, Computer Vision Research - University of California, Riverside</h3>
-                                        <p class="tw-text-gray-500 dark:tw-text-gray-200">Jul 2024 – Dec 2024</p>
-                                        <ul class="tw-list-disc">
-                                            <li>Conducted sensitivity analysis with increased sample sizes, reducing variance by 20% and improving detection accuracy by 30%.</li>
-                                            <li>Collaborated with entomologists to optimize algorithms tailored to specific biological requirements.</li>
-                                            <li>Analyzed mosquito structures in detail using advanced image processing for biological feature extraction.</li>
-                                            <li>Developed preprocessing pipelines to streamline data preparation for deep learning models.</li>
-                                            <li>Provided technical support and training to research team members on computer vision tools and workflows.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="tw-mb-8">
-                                    <div class="tw-flex tw-max-w-[650px] tw-flex-col tw-gap-2 tw-p-1">
-                                        <h3 class="tw-text-2xl tw-text-primary">Research Assistant - University of Guelph, Ontario</h3>
-                                        <p class="tw-text-gray-500 dark:tw-text-gray-200">Jan 2023 – Jun 2023</p>
-                                        <ul class="tw-list-disc">
-                                            <li>Utilized image segmentation with LLM-based text analysis to assess soil properties, improving accuracy by 18%.</li>
-                                            <li>Designed an automated application, reducing data processing time by 40% and enhancing indicator detection accuracy by 25%.</li>
-                                            <li>Collaborated with soil scientists to refine model parameters for precise results.</li>
-                                            <li>Integrated feedback from cross-disciplinary teams to ensure model usability for practical applications.</li>
-                                            <li>Co-authored a paper on data-driven soil characterization, contributing to a 15% performance boost.</li>
-                                            <li>Provided training sessions to graduate students, enhancing their understanding of AI applications in environmental research.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="tw-mb-8">
-                                    <div class="tw-flex tw-max-w-[650px] tw-flex-col tw-gap-2 tw-p-1">
-                                        <h3 class="tw-text-2xl tw-text-primary">Computer Vision Intern - UT Dallas & IIT Bombay, Remote</h3>
-                                        <p class="tw-text-gray-500 dark:tw-text-gray-200">Mar 2022 – Jul 2022</p>
-                                        <ul class="tw-list-disc">
-                                            <li>Created deep learning algorithms for autonomous vehicles, boosting object detection accuracy by 15% using Faster R-CNN and YOLO.</li>
-                                            <li>Enhanced segmentation accuracy by 20% with 3D simulations, improving off-road vehicle performance.</li>
-                                            <li>Developed a preprocessing pipeline, reducing training time by 25% for large datasets.</li>
-                                            <li>Collaborated with a multidisciplinary team to refine detection algorithms for varied terrain types.</li>
-                                            <li>Integrated machine learning models into real-time applications, optimizing system responsiveness.</li>
-                                            <li>Conducted A/B testing for model iterations, ensuring consistent improvements across evaluation metrics.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="tw-mb-8">
-                                    <div class="tw-flex tw-max-w-[650px] tw-flex-col tw-gap-2 tw-p-1">
-                                        <h3 class="tw-text-2xl tw-text-primary">Machine Learning Intern - Indian Institute of Technology, Bombay</h3>
-                                        <p class="tw-text-gray-500 dark:tw-text-gray-200">Jan 2021 – Sept 2022</p>
-                                        <ul class="tw-list-disc">
-                                            <li>Built knowledge curation engines for large datasets by applying ML/NLP techniques, optimizing pipelines to improve search relevancy and information retrieval.</li>
-                                            <li>Analyzed unstructured data to develop classification models, leveraging feature engineering and hyperparameter tuning to enhance model accuracy.</li>
-                                            <li>Designed clustering algorithms for dataset categorization, improving downstream task efficiency and reducing data redundancy.</li>
-                                            <li>Automated anomaly detection in large-scale datasets, achieving a 20% reduction in manual analysis overhead and streamlining data verification processes.</li>
-                                            <li>Optimized indexing strategies in data pipelines, reducing query response times by 35% and improving system performance for real-time queries.</li>
-                                            <li>Conducted performance benchmarking to identify pipeline bottlenecks, implementing solutions to enhance throughput for large datasets.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <section
-                            class="tab-content tw-relative tw-flex tw-hidden tw-w-full tw-flex-col tw-overflow-y-auto max-lg:tw-p-4"
-                            data-tab-name="projects"
-                        >
-                            <div class="tw-flex tw-h-full tw-w-full tw-flex-col tw-place-content-center tw-gap-6 tw-p-[5%] max-lg:tw-px-[10%] max-md:tw-px-2">
-                                <h2 class="tw-text-2xl tw-font-semibold tw-text-primary">Projects and Papers</h2>
-                                <div>
-                                    <h3 class="tw-text-xl tw-text-primary">Generative Networks and VAEs to Assist Artists - SRM IST, Paper and Project</h3>
-                                    <p class="tw-text-gray-500">Apr 2021 – Jun 2021</p>
-                                    <ul class="tw-list-disc">
-                                        <li>Designed Variational Autoencoders (VAEs) for sketch refinement, improving workflow efficiency by 30% and enhancing creative control.</li>
-                                        <li>Achieved 90.6% accuracy with the CUHK Face Sketch Database, presenting findings at ICCET 2023 in India.</li>
-                                        <li>Implemented advanced techniques to retain finer details in generated images, significantly improving visual fidelity.</li>
-                                        <li>Built a user-friendly interface for artists to seamlessly integrate the model into their creative workflows.</li>
-                                        <li>Collaborated with artists to validate real-world usability, leading to positive feedback on practicality and output quality.</li>
-                                        <li>Contributed to open-source repositories, enabling further enhancements and collaborative research in generative models.</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h3 class="tw-text-xl tw-text-primary">Energy Price Forecasting Using LSTMs and ARIMA - SATU, Paper and Project</h3>
-                                    <p class="tw-text-gray-500">Apr 2021 – Apr 2021</p>
-                                    <ul class="tw-list-disc">
-                                        <li>Developed LSTM and ARIMA models for energy price forecasting, improving prediction accuracy by 18% for Australian energy datasets.</li>
-                                        <li>Conducted NLP-based trend analysis to identify hidden patterns, providing actionable insights for stakeholders.</li>
-                                        <li>Improved model training speed through data preprocessing techniques, enabling real-time forecasting capabilities.</li>
-                                        <li>Built visual dashboards using Tableau, simplifying interpretation for non-technical decision-makers.</li>
-                                        <li>Presented findings at the AIJR Conference 2022, showcasing the balance between model performance and scalability.</li>
-                                        <li>Delivered comprehensive documentation and datasets for future research, supporting ongoing improvements in price prediction models.</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h3 class="tw-text-xl tw-text-primary">Anime Aesthetic Transformation with Pix2Pix GAN</h3>
-                                    <p class="tw-text-gray-500">Apr 2021 – Jun 2021</p>
-                                    <ul class="tw-list-disc">
-                                        <li>Utilized Pix2Pix GAN for transforming traditional anime images into enhanced, high-quality artworks.</li>
-                                        <li>Trained the model on a diverse dataset of anime images, achieving superior color correction and detail preservation.</li>
-                                        <li>Implemented an iterative feedback mechanism to refine output aesthetics based on user suggestions.</li>
-                                        <li>Presented the project at a local tech fair, receiving commendations for blending technology and creativity.</li>
-                                        <li>Optimized data preprocessing pipelines, reducing GPU training time by 20% without compromising output quality.</li>
-                                        <li>Collaborated with anime artists to validate output consistency, ensuring practical applicability for creative professionals.</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h3 class="tw-text-xl tw-text-primary">Optimized Firearm Detection</h3>
-                                    <p class="tw-text-gray-500">Dec 2020 – Feb 2021</p>
-                                    <ul class="tw-list-disc">
-                                        <li>Developed a firearm detection application using OpenCV and YOLOv3, achieving high precision and recall metrics.</li>
-                                        <li>Trained on a custom dataset of images and videos, optimizing the model for real-time security applications.</li>
-                                        <li>Integrated the model with CCTV feeds for real-time detection, enabling proactive security monitoring.</li>
-                                        <li>Optimized inference time through quantization and efficient model pruning, achieving a 25% reduction in latency.</li>
-                                        <li>Tested the model under varying lighting conditions and environmental noise to ensure robust performance.</li>
-                                        <li>Collaborated with security professionals to fine-tune the system for real-world deployment in surveillance systems.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </section>
-
-                        <section
-                            class="tab-content tw-relative tw-flex tw-hidden tw-h-full tw-w-full tw-flex-col tw-overflow-y-auto max-lg:tw-p-4"
-                            data-tab-name="organizations"
-                        >
-                            <div class="tw-flex tw-h-full tw-w-full tw-flex-col tw-place-content-center tw-gap-6 tw-p-[5%] max-lg:tw-px-[10%] max-md:tw-px-2">
-                                <h2 class="tw-text-3xl tw-font-semibold">Organizations</h2>
-                                <div>
-                                    <h3 class="tw-text-2xl">Next Tech Lab, Member</h3>
-                                    <p class="tw-text-gray-500">Apr 2021 – Jun 2023</p>
-                                    <ul class="tw-list-disc tw-ml-6">
-                                        <li>Led workshops, sharing machine learning expertise and fostering a collaborative learning environment.</li>
-                                        <li>Collaborated with researchers on AI projects in computational biology and machine learning.</li>
-                                        <li>Reviewed recent AI advancements, contributing to the lab's mission in computational biology.</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h3 class="tw-text-2xl">Team SRMAUV - SRM Autonomous Underwater Vehicle, Member</h3>
-                                    <ul class="tw-list-disc tw-ml-6">
-                                        <li>Contributed to Autonomous Underwater Vehicle (AUV) development, using ROS for integration.</li>
-                                        <li>Engineered algorithms for pathfinding and object detection in underwater environments.</li>
-                                        <li>Worked in a multidisciplinary team to optimize AUV performance for marine exploration.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </section>
-
-                        <section
-                            class="tab-content tw-relative tw-flex tw-hidden tw-h-full tw-w-full tw-flex-col tw-overflow-y-auto max-lg:tw-p-4"
-                            data-tab-name="education"
-                        >
-                            <div class="tw-flex tw-h-full tw-w-full tw-flex-col tw-place-content-center tw-gap-6 tw-p-[5%] max-lg:tw-px-[10%] max-md:tw-px-2">
-                                <h2 class="tw-text-3xl tw-font-semibold tw-text-primary">Education</h2>
-                                <div>
-                                    <h3 class="tw-text-2xl tw-text-primary">Master of Science, Computer Science - UC Riverside</h3>
-                                    <p class="tw-text-gray-500">09/2023 – 05/2024 | GPA: 3.6</p>
-                                </div>
-                                <div>
-                                    <h3 class="tw-text-2xl tw-text-primary">Bachelor of Technology, Computer Science - SRM IST</h3>
-                                    <p class="tw-text-gray-500">2019 – 05/2023 | GPA: 4.0</p>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-
-                    <footer
-                        class="tw-mt-auto tw-flex tw-w-full tw-justify-end tw-items-center tw-gap-3 tw-p-4 tw-px-8"
-                    ></footer>
-                </div>
+      </div>
+      <div class="tab-content" id="projects">
+        <h2 class="tw-text-3xl tw-font-semibold tw-text-primary" style="text-align:center;">Projects & Papers</h2>
+        <div class="projects-grid" style="margin-top:2em; display:grid; grid-template-columns:1fr; gap:2em;">
+          <div class="section-card project-parallax" style="text-align:left;">
+            <strong>Generative Networks and VAEs to Assist Artists</strong> - SRM IST, Paper and Project<br>
+            <span style="color:var(--text-muted);">Apr 2021 – Jun 2021</span>
+            <ul style="margin:0.5em 0 0 1.2em;">
+              <li>Designed Variational Autoencoders (VAEs) for sketch refinement, improving workflow efficiency by 30% and enhancing creative control.</li>
+              <li>Achieved 90.6% accuracy with the CUHK Face Sketch Database, presenting findings at ICCET 2023 in India.</li>
+              <li>Implemented advanced techniques to retain finer details in generated images, significantly improving visual fidelity.</li>
+              <li>Built a user-friendly interface for artists to seamlessly integrate the model into their creative workflows.</li>
+              <li>Validated real-world usability with artists, receiving positive feedback on practicality and output quality.</li>
+            </ul>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Keras</span>
+              <span class="tag">TensorFlow</span>
+              <span class="tag">OpenCV</span>
+              <span class="tag">VAE</span>
+              <span class="tag">CUHK Face Sketch DB</span>
+              <span class="tag">Generative Models</span>
+              <span class="tag">ICCET 2023</span>
+              <span class="tag">Paper</span>
             </div>
-        </main>
-
-        <!-- Cyberpunk anime-themed sounds -->
-        <audio id="cyberpunk-ambient" src="https://cdn.pixabay.com/audio/2022/10/16/audio_12b5b6b6b2.mp3" loop preload="auto"></audio>
-        <audio id="cyberpunk-modal-close" src="https://cdn.pixabay.com/audio/2022/10/16/audio_12b5b6b6b3.mp3" preload="auto"></audio>
-    </body>
-
-    <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"
-        integrity="sha512-B1lby8cGcAUU3GR+Fd809/ZxgHbfwJMp0jLTVfHiArTuUt++VqSlJpaJvhNtRf3NERaxDNmmxkdx2o+aHd4bvw=="
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer"
-    ></script>
-    <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"
-        integrity="sha512-AY2+JxnBETJ0wcXnLPCcZJIJx0eimyhz3OJ55k2Jx4RtYC+XdIi2VtJQ+tP3BaTst4otlGG1TtPJ9fKrAUnRdQ=="
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer"
-    ></script>
-
-    <script src="./index.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var modal = document.getElementById('seizure-modal');
-            var closeBtn = document.getElementById('close-seizure-modal');
-            var ambient = document.getElementById('cyberpunk-ambient');
-            var modalClose = document.getElementById('cyberpunk-modal-close');
-            // Prevent scroll while modal is open
-            document.body.style.overflow = 'hidden';
-            closeBtn.addEventListener('click', function() {
-                modal.classList.add('fade-out');
-                setTimeout(function() {
-                    modal.style.display = 'none';
-                    document.body.style.overflow = '';
-                    // Play modal close sound
-                    if (modalClose) {
-                        modalClose.currentTime = 0;
-                        modalClose.volume = 0.5;
-                        modalClose.play();
-                    }
-                    // Start ambient loop
-                    if (ambient) {
-                        ambient.volume = 0.18;
-                        ambient.play();
-                    }
-                }, 500);
-            });
-            // Optionally pause ambient on modal open (refresh)
-            if (ambient) ambient.pause();
-        });
-    </script>
-    <script>
-(function() {
-    // Sound elements
-    var ambient = document.getElementById('cyberpunk-ambient');
-    var modalClose = document.getElementById('cyberpunk-modal-close');
-    // Add a new short cyberpunk click sound
-    var clickSound = document.createElement('audio');
-    clickSound.src = 'https://cdn.pixabay.com/audio/2022/10/16/audio_12b5b6b6b3.mp3';
-    clickSound.preload = 'auto';
-    clickSound.volume = 0.22;
-    document.body.appendChild(clickSound);
-
-    // Play ambient after modal closes
-    document.addEventListener('DOMContentLoaded', function() {
-        var modal = document.getElementById('seizure-modal');
-        var closeBtn = document.getElementById('close-seizure-modal');
-        if (ambient) ambient.pause();
-        if (closeBtn) {
-            closeBtn.addEventListener('click', function() {
-                modal.classList.add('fade-out');
-                setTimeout(function() {
-                    modal.style.display = 'none';
-                    document.body.style.overflow = '';
-                    // Play modal close sound
-                    if (modalClose) {
-                        modalClose.currentTime = 0;
-                        modalClose.volume = 0.5;
-                        modalClose.play();
-                    }
-                    // Start ambient loop
-                    if (ambient) {
-                        ambient.volume = 0.18;
-                        ambient.play();
-                    }
-                }, 500);
-        }
+          </div>
+          <div class="section-card project-parallax" style="text-align:left;">
+            <strong>Energy Price Forecasting Using LSTMs and ARIMA</strong> - SATU, Paper and Project<br>
+            <span style="color:var(--text-muted);">Apr 2021 – Apr 2021</span>
+            <ul style="margin:0.5em 0 0 1.2em;">
+              <li>Developed LSTM and ARIMA models for energy price forecasting, improving prediction accuracy by 18% for Australian energy datasets.</li>
+              <li>Conducted NLP-based trend analysis to identify hidden patterns, providing actionable insights for stakeholders.</li>
+              <li>Improved model training speed through data preprocessing techniques, enabling real-time forecasting capabilities.</li>
+              <li>Built visual dashboards using Tableau, simplifying interpretation for non-technical decision-makers.</li>
+              <li>Presented findings at the AIJR Conference 2022, highlighting the balance between model performance and scalability.</li>
+            </ul>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">LSTM</span>
+              <span class="tag">ARIMA</span>
+              <span class="tag">NLP</span>
+              <span class="tag">Tableau</span>
+              <span class="tag">Pandas</span>
+              <span class="tag">Data Analysis</span>
+              <span class="tag">AIJR Conference 2022</span>
+              <span class="tag">Paper</span>
+            </div>
+          </div>
+          <div class="section-card project-parallax" style="text-align:left;">
+            <strong>Personal Fine-Tuned LLM Assistant</strong> - UC Riverside, 2024<br>
+            <span style="color:var(--text-muted);">2025</span>
+            <ul style="margin:0.5em 0 0 1.2em;">
+              <li>Created a personal LLM application fine-tuned on a Final Fantasy character dataset for daily assistance.</li>
+              <li>Allows users to select their favorite character as their AI helper for a personalized experience.</li>
+              <li>Utilizes the totl llama framework for efficient model serving and interaction.</li>
+              <li>Supports context-aware responses and task automation tailored to user preferences.</li>
+              <li>Designed for privacy, running locally without cloud dependencies.</li>
+            </ul>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">LLM</span>
+              <span class="tag">totl llama</span>
+              <span class="tag">Final Fantasy</span>
+              <span class="tag">Personal Assistant</span>
+              <span class="tag">NLP</span>
+              <span class="tag">UC Riverside</span>
+              <span class="tag">2024</span>
+              <span class="tag">2025</span>
+            </div>
+          </div>
+          <div class="section-card project-parallax" style="text-align:left;">
+            <strong>FundPilot: AI-Powered Web Form Automation</strong><br>
+            <span style="color:var(--text-muted);">2025</span>
+            <ul style="margin:0.5em 0 0 1.2em;">
+              <li>Automates web form filling using AI models and Selenium-based web automation tools.</li>
+              <li>Generates context-aware answers for form fields using advanced language models.</li>
+              <li>Designed for offline operation to maximize privacy and efficiency.</li>
+              <li>Integrates Python 3.x, Chrome, ChromeDriver, and Ollama with LLaMA 2 7B for robust automation.</li>
+              <li>Ensures compatibility and easy setup across different environments and browser versions.</li>
+            </ul>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Selenium</span>
+              <span class="tag">Ollama</span>
+              <span class="tag">LLaMA 2 7B</span>
+              <span class="tag">ChromeDriver</span>
+              <span class="tag">AI Automation</span>
+              <span class="tag">2025</span>
+            </div>
+          </div>
+          <div class="section-card project-parallax" style="text-align:left;">
+            <strong>Anime Aesthetic Transformation with Pix2Pix GAN</strong><br>
+            <span style="color:var(--text-muted);">Apr 2021 – Jun 2021</span>
+            <ul style="margin:0.5em 0 0 1.2em;">
+              <li>Utilized Pix2Pix GAN for transforming traditional anime images into enhanced, high-quality artworks.</li>
+              <li>Trained the model on a diverse dataset of anime images, achieving superior color correction and detail preservation.</li>
+              <li>Implemented an iterative feedback mechanism to refine output aesthetics based on user suggestions.</li>
+              <li>Presented the project at a local tech fair, receiving commendations for blending technology and creativity.</li>
+              <li>Optimized data preprocessing pipelines, reducing GPU training time by 20% without compromising output quality.</li>
+            </ul>
+            <div class="project-tags" style="margin-top:0.7em; display:flex; flex-wrap:wrap; gap:0.5em;">
+              <span class="tag">Python</span>
+              <span class="tag">Pix2Pix</span>
+              <span class="tag">GAN</span>
+              <span class="tag">Deep Learning</span>
+              <span class="tag">OpenCV</span>
+              <span class="tag">Data Preprocessing</span>
+              <span class="tag">2021</span>
+            </div>
+          </div>
+          <div class="section-card project-parallax" style="text-align:left;">
+            <strong>Starterdex+ Pokémon Identifier</strong><br>
+            <span style="color:var(--text-muted);">2021</span>
+            <ul style="margin:0.5em 0 0 1.2em;">
+              <li>Built an app to identify all 151 Gen 1 Pokémon and 15 mega evolutions using DenseNet201 and FastAI over PyTorch.</li>
+              <li>Provided detailed information and stats for each identified Pokémon.</li>
+              <li>Utilized advanced image classification for high accuracy and reliability.</li>
+              <li>Designed a modern, user-friendly interface for quick Pokémon lookup.</li>
+              <li>Optimized for mobile and desktop use, ensuring accessibility for all users.</li>
+            </ul>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">DenseNet201</span>
+              <span class="tag">FastAI</span>
+              <span class="tag">PyTorch</span>
+              <span class="tag">Pokémon</span>
+              <span class="tag">Image Classification</span>
+              <span class="tag">2021</span>
+            </div>
+          </div>
+          <div class="section-card project-parallax" style="text-align:left;">
+            <strong>Wasserstein GAN Art Generator</strong><br>
+            <span style="color:var(--text-muted);">2021</span>
+            <ul style="margin:0.5em 0 0 1.2em;">
+              <li>Developed a web application based on Wasserstein GAN with Gradient Penalty (WGAN-GP) to generate realistic paintings.</li>
+              <li>Trained the model on a dataset of 8,000 Albrecht Dürer paintings for high-fidelity artistic output.</li>
+              <li>Implemented a super-resolution mode to enhance generated images for detailed viewing.</li>
+              <li>Designed an intuitive user interface for generating and downloading artworks.</li>
+              <li>Optimized model performance for real-time generation and minimal latency in the web app.</li>
+            </ul>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">WGAN-GP</span>
+              <span class="tag">TensorFlow</span>
+              <span class="tag">Super-Resolution</span>
+              <span class="tag">Web App</span>
+              <span class="tag">Art Generation</span>
+              <span class="tag">2021</span>
+            </div>
+          </div>
+          <div class="section-card project-parallax" style="text-align:left;">
+            <strong>Hand Gesture Recognition via Webcam</strong><br>
+            <span style="color:var(--text-muted);">2020</span>
+            <ul style="margin:0.5em 0 0 1.2em;">
+              <li>Developed a real-time hand gesture recognition system using a standard computer webcam.</li>
+              <li>Implemented convolutional neural networks (CNNs) for accurate gesture classification.</li>
+              <li>Enabled sign language recognition and automation tasks based on detected gestures.</li>
+              <li>Optimized the model for low-latency inference and robust performance in varied lighting.</li>
+              <li>Designed a user-friendly interface for live gesture feedback and system control.</li>
+            </ul>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">CNN</span>
+              <span class="tag">OpenCV</span>
+              <span class="tag">Webcam</span>
+              <span class="tag">Sign Language</span>
+              <span class="tag">Automation</span>
+              <span class="tag">2020</span>
+            </div>
+          </div>
+          <div class="section-card project-parallax" style="text-align:left;">
+            <strong>Optimized Firearm Detection</strong><br>
+            <span style="color:var(--text-muted);">Dec 2020 – Feb 2021</span>
+            <ul style="margin:0.5em 0 0 1.2em;">
+              <li>Developed a firearm detection application using OpenCV and YOLOv3, achieving high precision and recall metrics.</li>
+              <li>Trained on a custom dataset of images and videos, optimizing the model for real-time security applications.</li>
+              <li>Integrated the model with CCTV feeds for real-time detection, enabling proactive security monitoring.</li>
+              <li>Optimized inference time through quantization and efficient model pruning, achieving a 25% reduction in latency.</li>
+              <li>Tested the model under varying lighting conditions and environmental noise to ensure robust performance.</li>
+            </ul>
+            <div class="project-tags" style="margin-top:0.7em; display:flex; flex-wrap:wrap; gap:0.5em;">
+              <span class="tag">Python</span>
+              <span class="tag">YOLOv3</span>
+              <span class="tag">OpenCV</span>
+              <span class="tag">Deep Learning</span>
+              <span class="tag">Computer Vision</span>
+              <span class="tag">Quantization</span>
+              <span class="tag">Model Pruning</span>
+              <span class="tag">2020</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-content" id="experience">
+        <h2 class="tw-text-3xl tw-font-semibold tw-text-primary" style="text-align:center;">Experience</h2>
+        <div class="timeline-container">
+          <div class="timeline">
+            <div class="timeline-event recent">
+              <div class="timeline-dot" style="border:none;"></div>
+              <div class="section-card">
+                <h3 class="tw-text-2xl tw-text-primary">Junior Specialist - University of California, Riverside</h3>
+                <p class="tw-text-gray-500">Feb 2025 – Dec 2025</p>
+                <ul class="tw-list-disc">
+                  <li>Engineered deep learning models for mosquito orientation classification, achieving 96% accuracy across four orientations.</li>
+                  <li>Utilized advanced image processing techniques—including thresholding, edge detection, and morphological transformations—for robust biological feature extraction.</li>
+                  <li>Integrated model deployment pipelines with interdisciplinary teams, optimizing end-to-end system performance and scalability.</li>
+                  <li>Enhanced scalability of feature extraction pipelines, ensuring adaptability for future biological studies.</li>
+                  <li>Documented research findings and contributed to publications, sharing insights with the scientific community.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="timeline-event">
+              <div class="timeline-dot" style="border:none;"></div>
+              <div class="section-card">
+                <h3 class="tw-text-2xl tw-text-primary">Student Assistant, Computer Vision Research - University of California, Riverside</h3>
+                <p class="tw-text-gray-500">Jul 2024 – Dec 2024</p>
+                <ul class="tw-list-disc">
+                  <li>Conducted sensitivity analysis with increased sample sizes, reducing variance by 20% and improving detection accuracy by 30%.</li>
+                  <li>Collaborated with entomologists to optimize algorithms tailored to specific biological requirements.</li>
+                  <li>Analyzed mosquito structures in detail using advanced image processing for biological feature extraction.</li>
+                  <li>Developed preprocessing pipelines to streamline data preparation for deep learning models.</li>
+                  <li>Provided technical support and training to research team members on computer vision tools and workflows.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="timeline-event">
+              <div class="timeline-dot" style="border:none;"></div>
+              <div class="section-card">
+                <h3 class="tw-text-2xl tw-text-primary">Research Assistant - University of Guelph, Ontario</h3>
+                <p class="tw-text-gray-500">Jan 2023 – Jun 2023</p>
+                <ul class="tw-list-disc">
+                  <li>Utilized image segmentation with LLM-based text analysis to assess soil properties, improving accuracy by 18%.</li>
+                  <li>Designed an automated application, reducing data processing time by 40% and enhancing indicator detection accuracy by 25%.</li>
+                  <li>Collaborated with soil scientists to refine model parameters for precise results.</li>
+                  <li>Integrated feedback from cross-disciplinary teams to ensure model usability for practical applications.</li>
+                  <li>Co-authored a paper on data-driven soil characterization, contributing to a 15% performance boost.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="timeline-event">
+              <div class="timeline-dot" style="border:none;"></div>
+              <div class="section-card">
+                <h3 class="tw-text-2xl tw-text-primary">Computer Vision Intern - UT Dallas & IIT Bombay, Remote</h3>
+                <p class="tw-text-gray-500">Mar 2022 – Jul 2022</p>
+                <ul class="tw-list-disc">
+                  <li>Created deep learning algorithms for autonomous vehicles, boosting object detection accuracy by 15% using Faster R-CNN and YOLO.</li>
+                  <li>Enhanced segmentation accuracy by 20% with 3D simulations, improving off-road vehicle performance.</li>
+                  <li>Developed a preprocessing pipeline, reducing training time by 25% for large datasets.</li>
+                  <li>Collaborated with a multidisciplinary team to refine detection algorithms for varied terrain types.</li>
+                  <li>Integrated machine learning models into real-time applications, optimizing system responsiveness.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="timeline-event">
+              <div class="timeline-dot" style="border:none;"></div>
+              <div class="section-card">
+                <h3 class="tw-text-2xl tw-text-primary">Machine Learning Intern - Indian Institute of Technology, Bombay</h3>
+                <p class="tw-text-gray-500">Jan 2021 – Sept 2022</p>
+                <ul class="tw-list-disc">
+                  <li>Built knowledge curation engines for large datasets by applying ML/NLP techniques, optimizing pipelines to improve search relevancy and information retrieval.</li>
+                  <li>Analyzed unstructured data to develop classification models, leveraging feature engineering and hyperparameter tuning to enhance model accuracy.</li>
+                  <li>Designed clustering algorithms for dataset categorization, improving downstream task efficiency and reducing data redundancy.</li>
+                  <li>Automated anomaly detection in large-scale datasets, achieving a 20% reduction in manual analysis overhead and streamlining data verification processes.</li>
+                  <li>Optimized indexing strategies in data pipelines, reducing query response times by 35% and improving system performance for real-time queries.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-content" id="education">
+        <h2 class="tw-text-3xl tw-font-semibold tw-text-primary" style="text-align:center;">Education</h2>
+        <div class="timeline-container">
+          <div class="timeline">
+            <div class="timeline-event">
+              <div class="timeline-dot" style="border:none;"></div>
+              <div class="section-card">
+                <h3 class="tw-text-2xl tw-text-primary">Master of Science, Computer Science - UC Riverside</h3>
+                <p class="tw-text-gray-500">09/2023 – 05/2024 | GPA: 3.6</p>
+              </div>
+            </div>
+            <div class="timeline-event">
+              <div class="timeline-dot" style="border:none;"></div>
+              <div class="section-card">
+                <h3 class="tw-text-2xl tw-text-primary">Bachelor of Technology, Computer Science - SRM IST</h3>
+                <p class="tw-text-gray-500">2019 – 05/2023 | GPA: 4.0</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer style="width:100%;text-align:center;padding:2em 0 1.2em 0;color:var(--text-muted);font-size:1em;letter-spacing:0.01em;">
+    Updated: June 2025 &nbsp;|&nbsp; © 2025 Parikshit Kumar &nbsp;|&nbsp; Made in California <span class="footer-emoji">☀️</span> with a dash of code and <span class="footer-emoji">☕️</span>
+  </footer>
+  <script>
+    // Parallax effect on scroll
+    window.addEventListener('scroll', function() {
+      const y = window.scrollY;
+      document.body.style.backgroundPosition = `center ${y * 0.08}px`;
     });
 
-    // Play click sound on every click (except modal close)
-    document.addEventListener('click', function(e) {
-        // Don't play on modal close button (already handled)
-        if (e.target && e.target.id === 'close-seizure-modal') return;
-        // Don't play if modal is still open
-        var modal = document.getElementById('seizure-modal');
-        if (modal && modal.style.display !== 'none' && !modal.classList.contains('fade-out')) return;
-        // Play click sound
-        if (clickSound) {
-            clickSound.currentTime = 0;
-            clickSound.play();
+    // Custom cyan-glow cursor
+    (function() {
+      const cursor = document.createElement('div');
+      cursor.className = 'custom-cursor';
+      document.body.appendChild(cursor);
+      document.addEventListener('mousemove', e => {
+        cursor.style.transform = `translate3d(${e.clientX - 11}px, ${e.clientY - 11}px, 0)`;
+      });
+      // Cursor hover effect for interactive elements
+      const hoverables = ['a', 'button', '.tab-btn', '.section-card', '.socials a'];
+      hoverables.forEach(sel => {
+        document.querySelectorAll(sel).forEach(el => {
+          el.addEventListener('mouseenter', () => cursor.classList.add('cursor-hover'));
+          el.addEventListener('mouseleave', () => cursor.classList.remove('cursor-hover'));
+        });
+      });
+      // Hide cursor on touch devices
+      function isTouchDevice() {
+        return 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+      }
+      if (isTouchDevice()) cursor.style.display = 'none';
+    })();
+
+    // Dynamic footer date
+    document.addEventListener('DOMContentLoaded', function() {
+      const footer = document.querySelector('footer');
+      if (footer) {
+        const now = new Date();
+        const month = now.toLocaleString('default', { month: 'long' });
+        const year = now.getFullYear();
+        footer.innerHTML = `Updated: ${month} ${year} &nbsp;|&nbsp; © ${year} Parikshit Kumar &nbsp;|&nbsp; Made in California <span class="footer-emoji">☀️</span> with a dash of code and <span class="footer-emoji">☕️</span>`;
+      }
+    });
+
+    // Greeting based on time
+    document.addEventListener('DOMContentLoaded', function() {
+      const aboutTab = document.getElementById('about');
+      if (aboutTab) {
+        const hour = new Date().getHours();
+        let greeting = 'Hello';
+        if (hour < 12) greeting = 'Good morning';
+        else if (hour < 18) greeting = 'Good afternoon';
+        else greeting = 'Good evening';
+        const aboutH2 = aboutTab.querySelector('h2');
+        if (aboutH2) {
+          aboutH2.innerHTML = `${greeting}, I’m Parikshit.`;
         }
-    }, true);
-})();
-</script>
+      }
+    });
+
+    // Parallax effect for project cards
+    function addProjectParallax() {
+      const cards = document.querySelectorAll('.project-parallax');
+      cards.forEach(card => {
+        card.addEventListener('mousemove', e => {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          const centerX = rect.width / 2;
+          const centerY = rect.height / 2;
+          const rotateX = ((y - centerY) / centerY) * 8;
+          const rotateY = ((x - centerX) / centerX) * 8;
+          card.style.transform = `rotateX(${-rotateX}deg) rotateY(${rotateY}deg)`;
+        });
+        card.addEventListener('mouseleave', () => {
+          card.style.transform = '';
+        });
+      });
+    }
+    document.addEventListener('DOMContentLoaded', addProjectParallax);
+
+    // Section fade-in on scroll
+    const fadeEls = document.querySelectorAll('.main-content, .section-card, .timeline-event, .skills-grid, .section-divider');
+    const fadeIn = (el) => {
+      el.style.opacity = 1;
+      el.style.transform = 'translateY(0)';
+      el.style.transition = 'opacity 0.7s cubic-bezier(.4,0,.2,1), transform 0.7s cubic-bezier(.4,0,.2,1)';
+    };
+    const fadeOut = (el) => {
+      el.style.opacity = 0;
+      el.style.transform = 'translateY(40px)';
+    };
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) fadeIn(entry.target);
+        });
+      }, { threshold: 0.12 });
+      fadeEls.forEach(el => {
+        fadeOut(el);
+        observer.observe(el);
+      });
+    } else {
+      fadeEls.forEach(fadeIn);
+    }
+
+    // Touch feedback for interactive elements
+    function addTouchFeedback(selector) {
+      document.querySelectorAll(selector).forEach(el => {
+        el.addEventListener('touchstart', () => {
+          el.style.filter = 'brightness(1.2)';
+        });
+        el.addEventListener('touchend', () => {
+          el.style.filter = '';
+        });
+      });
+    }
+    addTouchFeedback('.tab-btn, .section-card, .socials a');
+
+    // Tab switching logic
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(tc => tc.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById(btn.getAttribute('data-tab')).classList.add('active');
+      });
+    });
+  </script>
+</body>
 </html>
