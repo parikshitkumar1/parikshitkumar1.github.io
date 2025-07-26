@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>suffoco tres eius</title>
+</head>
+<body>
+    <div class="hard drive">
+        <h1>ubi sonitus patria</h1>
+        <p>Inflammatio alienus super infit ait subvenio nemo sufficio tenus numquam. Supplanto tenus atqui pel sublime cumque textilis accedo velut. Degero cito votum surgo solum umquam sopor cruciamentum.</p>
+        <button onclick="hack()">teneo bestia sordeo</button>
+    </div>
+</body>
+</html>
