@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>defluo alias denuo</title>
+</head>
+<body>
+    <div class="circuit">
+        <h1>suus vorax celo</h1>
+        <p>Angelus clam coaegresco baiulus vivo quas occaecati basium. Vulariter aggero cultellus eos perferendis. Vaco comparo accommodo territo benigne capto suadeo demergo curiositas voluptates.</p>
+        <button onclick="reboot()">anser vulnus amor</button>
+    </div>
+</body>
+</html>
