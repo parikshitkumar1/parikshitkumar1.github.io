@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>auctor decor subito</title>
+</head>
+<body>
+    <div class="monitor">
+        <h1>corrumpo esse cognomen</h1>
+        <p>Celo deserunt dens. Ambulo carcer iste coniecto tredecim demonstro. Adficio consuasor thymbra.</p>
+        <button onclick="navigate()">adsidue ancilla cibo</button>
+    </div>
+</body>
+</html>
