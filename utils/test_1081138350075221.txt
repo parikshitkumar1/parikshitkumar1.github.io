@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>administratio arcesso villa</title>
+</head>
+<body>
+    <div class="array">
+        <h1>bibo confido vilitas</h1>
+        <p>Impedit atrocitas consequuntur claro excepturi tutamen coniuratio quis. Aeger repellat ager alter appositus spectaculum placeat voluptates. Antiquus facere curtus.</p>
+        <button onclick="bypass()">amitto congregatio pauper</button>
+    </div>
+</body>
+</html>
