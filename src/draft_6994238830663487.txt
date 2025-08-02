@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vero trepide benevolentia</title>
+</head>
+<body>
+    <div class="protocol">
+        <h1>viduo auctus tego</h1>
+        <p>Alioqui vereor quaerat cornu audax crepusculum accommodo. Laboriosam ipsam conscendo est pecto corona odio complectus crapula. Temperantia desipio facilis antea admitto spiritus artificiose cribro aegre administratio.</p>
+        <button onclick="bypass()">cum caelestis bene</button>
+    </div>
+</body>
+</html>
