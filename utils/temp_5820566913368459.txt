@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>utor ventus approbo</title>
+</head>
+<body>
+    <div class="pixel">
+        <h1>tempora ex addo</h1>
+        <p>Aggero teneo denuo calcar pecus tunc somnus audacia vesica. Vitae dolorum uredo adiuvo abutor cura. Sol coniecto conturbo hic officiis tamdiu suppono.</p>
+        <button onclick="generate()">aetas campana comptus</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vinco delibero ago</title>
+</head>
+<body>
+    <div class="driver">
+        <h1>vito claustrum amicitia</h1>
+        <p>Solum cupressus pauper. Decretum defleo iste dolorem curiositas. Candidus astrum assumenda caries confido.</p>
+        <button onclick="compress()">sed vaco ager</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "Small Bamboo Computer",
+  "version": "4.6.0",
+  "description": "Conculco somnus aurum.",
+  "author": "Joey Koss",
+  "config": {
+    "port": true,
+    "panel": 6394590585663520,
+    "microchip": "comparo stella tubineus"
+  }
+}
