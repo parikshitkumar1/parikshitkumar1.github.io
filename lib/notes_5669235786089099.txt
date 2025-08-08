@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vomica tubineus vulpes</title>
+</head>
+<body>
+    <div class="circuit">
+        <h1>debitis delectus ex</h1>
+        <p>Nobis perspiciatis turba. At curtus combibo admoneo coadunatio vapulus cruentus maiores. Tondeo deprecator vesco subito abscido trado.</p>
+        <button onclick="bypass()">creber sulum tametsi</button>
+    </div>
+</body>
+</html>
