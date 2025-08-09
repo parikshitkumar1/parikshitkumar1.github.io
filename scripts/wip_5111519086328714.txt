@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>articulus ipsa campana</title>
+</head>
+<body>
+    <div class="protocol">
+        <h1>explicabo textor cilicium</h1>
+        <p>Dens depopulo cogito. Arguo suggero curto capto triumphus. Temeritas tricesimus avarus turpis ratione vespillo sperno.</p>
+        <button onclick="transmit()">spes tantillus tandem</button>
+    </div>
+</body>
+</html>
