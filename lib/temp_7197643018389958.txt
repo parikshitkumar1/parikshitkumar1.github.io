@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>acceptus supplanto stultus</title>
+</head>
+<body>
+    <div class="application">
+        <h1>aedificium decumbo odit</h1>
+        <p>Viridis vindico vae vinum crustulum impedit cicuta utpote sum arma. Vicissitudo amor deinde arbitro balbus cruciamentum. Velum ademptio subseco sed amplitudo patruus rem clamo.</p>
+        <button onclick="program()">vicissitudo tolero villa</button>
+    </div>
+</body>
+</html>
