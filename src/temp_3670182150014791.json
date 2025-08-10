@@ -1,0 +1,11 @@
+{
+  "name": "Handmade Aluminum Keyboard",
+  "version": "7.1.13",
+  "description": "Adstringo utrimque dignissimos vulpes cohibeo statim carus alioqui.",
+  "author": "Tom Emard",
+  "config": {
+    "circuit": true,
+    "bus": 8413775152906359,
+    "protocol": "amoveo comedo venustas"
+  }
+}
