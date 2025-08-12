@@ -1,0 +1,11 @@
+{
+  "name": "Gorgeous Gold Soap",
+  "version": "6.10.12",
+  "description": "Illo conspergo complectus nisi vehemens atque culpo.",
+  "author": "Sandra Casper",
+  "config": {
+    "capacitor": true,
+    "protocol": 8438278707402223,
+    "driver": "volo varietas cattus"
+  }
+}
