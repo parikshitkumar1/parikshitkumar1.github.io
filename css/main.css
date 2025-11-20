@@ -655,4 +655,25 @@ body, html {
   .skills-grid-tech {
     column-count: 1;
   }
+
+  /* Make tab buttons easier to tap on mobile */
+  .tab-btn {
+    font-size: 0.9rem;
+    padding: 0.3em 1.1em;
+  }
+
+  /* Ensure timelines are vertical on small screens (no horizontal swipe)
+     so Experience behaves like other sections */
+  .timeline-container {
+    overflow-x: visible;
+  }
+
+  .timeline {
+    display: block;
+    border-top: none;
+  }
+
+  .timeline-event {
+    min-width: auto;
+  }
 }
