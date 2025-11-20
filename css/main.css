@@ -1,15 +1,15 @@
 :root {
-  --primary-blue: #1bc6c4;
-  --timeline-dot: #1bc6c4;
-  --timeline-line: #1bc6c4;
+  --primary-blue: #0ea5b5;
+  --timeline-dot: #0ea5b5;
+  --timeline-line: #0ea5b5;
   --card-bg: #181818;
   --text-main: #fff;
-  --text-muted: #b0b0b0;
+  --text-muted: #6b7280;
   --bg-main: #000;
   --surface: #0e0e0e;
-  --border: #222;
+  --border: #e5e7eb;
   --shadow: #111;
-  --radius: 18px; /* rounder corners */
+  --radius: 18px;
   --space-1: 6px;
   --space-2: 10px;
   --space-3: 16px;
@@ -29,12 +29,14 @@
 html, body {
   background: var(--bg-main);
   color: var(--text-main);
-  font-family: 'Inter', Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, system-ui, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
   margin: 0;
   padding: 0;
   min-height: 100vh;
   width: 100vw;
-  /* Background image */
+  /* Background image (overridden by minimalist layout below) */
   background-image: url('../60.png');
   background-size: cover;
   background-position: center center;
@@ -43,10 +45,23 @@ html, body {
 h1, h2, h3, h4, h5, h6, .tw-text-primary { color: var(--primary-blue); margin: 0; }
 a, .link { color: var(--primary-blue); text-decoration: none; }
 a:hover, .link:hover { text-decoration: underline; }
+/* original tab styles (overridden later by minimalist layout) */
 .tab-btn {
-  background: none; border: none; color: var(--primary-blue); font-size: 1.1em; font-weight: 600; cursor: pointer; padding: 0.5em 1.2em; border-radius: 6px; transition: background 0.2s;
+  background: none;
+  border: none;
+  color: var(--primary-blue);
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.5em 1.2em;
+  border-radius: 6px;
 }
-.tab-btn.active, .tab-btn:focus { background: #181818; color: var(--primary-blue); outline: none; }
+.tab-btn.active,
+.tab-btn:focus {
+  background: transparent;
+  color: var(--primary-blue);
+  outline: none;
+}
 .timeline-dot { background: var(--timeline-dot); box-shadow: 0 2px 8px 0 var(--timeline-dot); }
 .section-card h3, .section-card strong { color: var(--primary-blue); }
 .skills-grid .skill-card strong { color: var(--primary-blue); }
@@ -63,7 +78,7 @@ body.scrolling .sidebar { opacity: 0; transform: translateY(-6px); pointer-event
 }
 .profile-img img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
 .name { font-size: 2.4rem; font-weight: 700; margin-bottom: 0.2em; }
-.subtitle { color: var(--primary-blue); font-size: 1.1rem; margin-bottom: 1.2em; }
+.subtitle { color: var(--text-muted); font-size: 1.02rem; margin-bottom: 1.1em; }
 .socials { display: flex; gap: 2em; font-size: 1.44em; margin-bottom: 1.5em; }
 .main-content { background: rgba(10, 10, 10, 0.45); color: var(--text-main); border-radius: var(--radius); box-shadow: 0 2px 24px 0 var(--shadow); padding: 2.5rem 2rem; margin-bottom: 2.5rem; border: 1px solid rgba(255,255,255,0.08); }
 .tabs { display: flex; gap: 1.5em; margin-bottom: 2.5rem; justify-content:center; }
@@ -128,9 +143,9 @@ body::before {
 .tab-btn:focus-visible, a:focus-visible, .section-card:focus-within { outline: 2px solid var(--primary-blue); outline-offset: 3px; border-radius: 8px; }
 /* Respect reduced motion preferences */
 @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } .custom-cursor { display: none !important; } }
-/* Tab underline animation */
+/* (overridden later) tab underline animation */
 .tab-btn { position: relative; overflow: hidden; }
-.tab-btn::after { content: ''; display: block; position: absolute; left: 50%; bottom: 0; width: 0; height: 2.5px; background: linear-gradient(90deg, #1bc6c4 60%, #fff 100%); border-radius: 2px; transition: width 0.3s, left 0.3s; }
+.tab-btn::after { content: ''; display: block; position: absolute; left: 50%; bottom: 0; width: 0; height: 2.5px; background: linear-gradient(90deg, #1bc6c4 60%, #fff 100%); border-radius: 2px; }
 .tab-btn.active::after, .tab-btn:hover::after { width: 80%; left: 10%; }
 /* Custom section divider */
 .section-divider { width: 100%; height: 18px; margin: 2.5em 0 2em 0; background: none; display: flex; align-items: center; justify-content: center; }
@@ -255,4 +270,384 @@ body, html { cursor: none; }
 
 @media (min-width: 800px) {
   .projects-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* Minimalist single-column layout overrides */
+html, body {
+  background: #ffffff;
+  color: #111827;
+  background-image: none;
+  background-attachment: scroll;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, system-ui, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: -0.01em;
+}
+
+body::before {
+  display: none !important;
+}
+
+.container {
+  max-width: 720px;
+  margin: 80px auto 72px;
+  padding: 0 24px;
+}
+
+.sidebar {
+  align-items: flex-start;
+  text-align: left;
+  gap: 0.25rem;
+  padding: 0 0 32px 0;
+}
+
+.profile-img {
+  width: 56px;
+  height: 56px;
+  border-radius: 999px;
+  margin-bottom: 0.75rem;
+  border: 1px solid var(--border);
+  box-shadow: none;
+}
+
+.name {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.subtitle {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.socials {
+  font-size: 0.9rem;
+  gap: 1rem;
+}
+
+.main-content {
+  background: transparent;
+  border-radius: 0;
+  border: none;
+  padding: 0;
+  box-shadow: none;
+  color: #111827;
+}
+
+.hero {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin-bottom: 32px;
+  box-shadow: none;
+}
+
+.hero h1 {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.section-divider {
+  height: auto;
+  margin: 24px 0;
+}
+
+.section-divider svg {
+  display: none;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 24px 0 8px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  justify-content: flex-start;
+}
+
+.tab-content {
+  display: block !important;
+  margin: 32px 0;
+}
+
+.tab-content h2 {
+  font-size: 1.02rem;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0.02em;
+  color: #111827;
+  margin-bottom: 0.4rem;
+}
+
+.main-content p {
+  max-width: 60ch;
+  margin: 0 0 0.85rem 0;
+  color: #111827;
+}
+
+.main-content ul {
+  list-style: disc;
+  padding-left: 1.4rem;
+  margin: 0.25rem 0 1.2rem 0;
+}
+
+.main-content li {
+  margin: 0.15rem 0;
+  line-height: 1.5;
+}
+
+/* Skills as simple bullet lists */
+.skills-grid {
+  display: block;
+  margin: 0.35rem 0 1.2rem;
+}
+
+.skills-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #111827;
+  margin-top: 0.8rem;
+}
+
+.skills-label:first-of-type {
+  margin-top: 0.3rem;
+}
+
+.skill-card {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  color: #111827;
+  display: list-item;
+  list-style: disc;
+  margin-left: 1.4rem;
+  font-size: 0.95rem;
+}
+
+.skill-card strong {
+  color: inherit;
+}
+
+/* Experience / education timeline -> flat blocks */
+.timeline-container {
+  padding: 0;
+}
+
+.timeline {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.timeline-event {
+  margin: 0 0 20px 0;
+  position: static;
+}
+
+.timeline-dot {
+  display: none;
+}
+
+.section-card {
+  padding: 0;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+}
+
+.section-card h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.section-card p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Projects -> simple stacked blocks */
+.projects-grid {
+  display: block;
+}
+
+.project-card {
+  border: none;
+  background: transparent;
+  padding: 0.4rem 0 1.4rem 0;
+  box-shadow: none;
+}
+
+.project-card h3,
+.project-card strong {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0 0 0.15rem 0;
+  color: #111827;
+}
+
+.project-meta {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
+}
+
+.project-tags {
+  margin-top: 0.3rem;
+}
+
+.tag {
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  font-size: 0.82rem;
+  color: var(--primary-blue);
+}
+
+/* Buttons behave like text links */
+.btn,
+.btn-primary,
+.btn-secondary {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: var(--primary-blue);
+  padding: 0;
+  border-radius: 0;
+  font-weight: 400;
+  box-shadow: none;
+}
+
+.btn:hover,
+.btn-primary:hover,
+.btn-secondary:hover {
+  transform: none;
+  box-shadow: none;
+  text-decoration: underline;
+}
+
+footer {
+  border-top: 1px solid var(--border);
+  margin-top: 32px;
+}
+
+.tab-content + .tab-content {
+  border-top: 1px solid var(--border);
+  padding-top: 24px;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  border-radius: 0;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: inherit;
+  cursor: default;
+  position: static;
+  overflow: visible;
+  box-shadow: none;
+}
+
+.tab-btn.active,
+.tab-btn:focus {
+  background: transparent;
+  color: inherit;
+}
+
+.tab-btn::after {
+  display: none !important;
+}
+
+/* Make tools list two-column on wider screens for easier scanning */
+.skills-grid-tools {
+  column-count: 2;
+  column-gap: 2.2rem;
+}
+
+.skills-grid-tools .skill-card {
+  break-inside: avoid;
+}
+
+.skills-grid-tech {
+  column-count: 2;
+  column-gap: 2.2rem;
+}
+
+.skills-grid-tech .skill-card {
+  break-inside: avoid;
+}
+
+/* Ensure skills are body-colored, not teal */
+.skills-grid .skill-card strong {
+  color: inherit;
+}
+
+@media (max-width: 700px) {
+  .skills-grid-tools {
+    column-count: 1;
+  }
+}
+
+/* Remove card-like hover effects while keeping focus styles */
+.section-card:hover {
+  box-shadow: none;
+  transform: none;
+  border-color: transparent;
+  background: transparent;
+}
+
+.socials a:hover {
+  transform: none;
+  box-shadow: none;
+  background: transparent;
+}
+
+.tw-text-primary:hover,
+.tag:hover {
+  animation: none;
+  filter: none;
+}
+
+/* Remove custom cursor for minimalist layout */
+body, html {
+  cursor: auto;
+}
+
+.custom-cursor {
+  display: none !important;
+}
+
+@media (max-width: 700px) {
+  .container {
+    margin: 32px auto 32px;
+    padding: 0 18px;
+  }
+
+  body {
+    font-size: 15px;
+    line-height: 1.6;
+    letter-spacing: 0.01em;
+  }
+
+  .tabs {
+    margin: 16px 0 4px;
+    font-size: 0.78rem;
+  }
+
+  .tab-content {
+    margin: 24px 0;
+  }
+
+  .skills-grid-tools,
+  .skills-grid-tech {
+    column-count: 1;
+  }
 }

@@ -196,48 +196,12 @@ function addTouchFeedback(selector) {
 }
 addTouchFeedback('.tab-btn, .section-card, .socials a');
 
-// Accessible tab switching logic (ARIA + hidden)
-(function initTabs() {
-  const tablist = document.querySelector('[role="tablist"]');
-  const tabs = Array.from(document.querySelectorAll('[role="tab"]'));
+// In the minimalist layout, show all sections at once instead of toggling tabs.
+// Keep ARIA markup but ensure every panel is visible.
+(function initStaticSections() {
   const panels = Array.from(document.querySelectorAll('[role="tabpanel"]'));
-
-  function activateTab(tab, setFocus = true) {
-    const targetId = tab.getAttribute('data-tab');
-    tabs.forEach(t => {
-      const selected = t === tab;
-      t.classList.toggle('active', selected);
-      t.setAttribute('aria-selected', selected ? 'true' : 'false');
-      t.tabIndex = selected ? 0 : -1;
-    });
-    panels.forEach(p => {
-      const isTarget = p.id === targetId;
-      p.classList.toggle('active', isTarget);
-      if (isTarget) {
-        p.removeAttribute('hidden');
-      } else {
-        p.setAttribute('hidden', '');
-      }
-    });
-    if (setFocus) tab.focus();
-  }
-
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => activateTab(tab, false));
-    tab.addEventListener('keydown', (e) => {
-      const i = tabs.indexOf(tab);
-      let nextIdx = i;
-      if (e.key === 'ArrowRight') nextIdx = (i + 1) % tabs.length;
-      if (e.key === 'ArrowLeft') nextIdx = (i - 1 + tabs.length) % tabs.length;
-      if (e.key === 'Home') nextIdx = 0;
-      if (e.key === 'End') nextIdx = tabs.length - 1;
-      if (nextIdx !== i) {
-        e.preventDefault();
-        activateTab(tabs[nextIdx]);
-      }
-    });
+  panels.forEach(p => {
+    p.classList.add('active');
+    p.removeAttribute('hidden');
   });
-
-  const initial = tabs.find(t => t.classList.contains('active')) || tabs[0];
-  activateTab(initial, false);
 })();
