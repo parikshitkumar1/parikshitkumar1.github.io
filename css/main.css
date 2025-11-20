@@ -677,3 +677,15 @@ body, html {
     min-width: auto;
   }
 }
+
+/* Force-hide leftover timeline dots everywhere */
+.timeline-dot {
+  display: none !important;
+}
+
+/* Also neutralize Tailwind timeline decorations (lines and circles) */
+.timeline::before,
+.timeline-container::after {
+  content: none !important;
+  display: none !important;
+}
