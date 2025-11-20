@@ -278,6 +278,11 @@ html, body {
   color: #111827;
   background-image: none;
   background-attachment: scroll;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 body {
@@ -550,7 +555,7 @@ footer {
   font-size: 0.75rem;
   font-weight: 400;
   color: inherit;
-  cursor: default;
+  cursor: pointer;
   position: static;
   overflow: visible;
   box-shadow: none;
@@ -559,7 +564,7 @@ footer {
 .tab-btn.active,
 .tab-btn:focus {
   background: transparent;
-  color: inherit;
+  color: var(--primary-blue);
 }
 
 .tab-btn::after {
