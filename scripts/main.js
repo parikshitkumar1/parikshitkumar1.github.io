@@ -25,27 +25,8 @@
 })();
 
 // Parallax effect on scroll (throttled + disabled on touch/reduced-motion)
-(function initParallax() {
-  const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (isTouch || prefersReduced) {
-    document.body.style.backgroundPosition = 'center 0px';
-    return;
-  }
-  let ticking = false;
-  function onScroll() {
-    const y = window.scrollY || 0;
-    document.body.style.backgroundPosition = `center ${y * 0.06}px`;
-    ticking = false;
-  }
-  window.addEventListener('scroll', () => {
-    if (!ticking) {
-      window.requestAnimationFrame(onScroll);
-      ticking = true;
-    }
-  }, { passive: true });
-  onScroll();
-})();
+// Parallax background disabled for faster paint
+(function initParallax() { /* no-op */ })();
 
 // Toggle body.scrolling to hide sidebar content when not at the very top
 (function initScrollHideSidebar() {
@@ -71,28 +52,8 @@
   onScroll();
 })();
 
-// Custom cyan-glow cursor
-(function() {
-  const cursor = document.createElement('div');
-  cursor.className = 'custom-cursor';
-  document.body.appendChild(cursor);
-  document.addEventListener('mousemove', e => {
-    cursor.style.transform = `translate3d(${e.clientX - 11}px, ${e.clientY - 11}px, 0)`;
-  });
-  // Cursor hover effect for interactive elements
-  const hoverables = ['a', 'button', '.btn', '.tab-btn', '.section-card', '.socials a'];
-  hoverables.forEach(sel => {
-    document.querySelectorAll(sel).forEach(el => {
-      el.addEventListener('mouseenter', () => cursor.classList.add('cursor-hover'));
-      el.addEventListener('mouseleave', () => cursor.classList.remove('cursor-hover'));
-    });
-  });
-  // Hide cursor on touch devices
-  function isTouchDevice() {
-    return 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-  }
-  if (isTouchDevice()) cursor.style.display = 'none';
-})();
+// Custom cursor disabled for performance
+(function() { /* no-op */ })();
 
 // Dynamic footer date
 document.addEventListener('DOMContentLoaded', function() {
@@ -113,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let greeting = 'Hello';
     if (hour < 12) greeting = 'Good morning';
     else if (hour < 18) greeting = 'Good afternoon';
-    else greeting = 'Good evening';
+    else greeting = 'Hello';
     const aboutH2 = aboutTab.querySelector('h2');
     if (aboutH2) {
       aboutH2.innerHTML = `${greeting}, I’m Parikshit.`;
@@ -122,66 +83,19 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Parallax effect for project cards
-function addProjectParallax() {
-  const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (isTouch || prefersReduced) return; // skip for touch and reduced motion
-  const cards = document.querySelectorAll('.project-parallax');
-  cards.forEach(card => {
-    let ticking = false;
-    let lastEvent = null;
-    function apply() {
-      if (!lastEvent) { ticking = false; return; }
-      const rect = card.getBoundingClientRect();
-      const x = lastEvent.clientX - rect.left;
-      const y = lastEvent.clientY - rect.top;
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
-      const rotateX = ((y - centerY) / centerY) * 6; // slightly reduced amplitude
-      const rotateY = ((x - centerX) / centerX) * 6;
-      card.style.willChange = 'transform';
-      card.style.transform = `rotateX(${-rotateX}deg) rotateY(${rotateY}deg)`;
-      ticking = false;
-    }
-    card.addEventListener('mousemove', e => {
-      lastEvent = e;
-      if (!ticking) {
-        window.requestAnimationFrame(apply);
-        ticking = true;
-      }
-    });
-    card.addEventListener('mouseleave', () => {
-      card.style.transform = '';
-      card.style.willChange = '';
-    });
-  });
-}
+// Project card parallax disabled for performance
+function addProjectParallax() { /* no-op */ }
 document.addEventListener('DOMContentLoaded', addProjectParallax);
 
 // Section fade-in on scroll
 const fadeEls = document.querySelectorAll('.main-content, .section-card, .timeline-event, .skills-grid, .section-divider');
 const fadeIn = (el) => {
   el.style.opacity = 1;
-  el.style.transform = 'translateY(0)';
-  el.style.transition = 'opacity 0.7s cubic-bezier(.4,0,.2,1), transform 0.7s cubic-bezier(.4,0,.2,1)';
+  el.style.transform = 'none';
+  el.style.transition = 'none';
 };
-const fadeOut = (el) => {
-  el.style.opacity = 0;
-  el.style.transform = 'translateY(40px)';
-};
-if ('IntersectionObserver' in window) {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) fadeIn(entry.target);
-    });
-  }, { threshold: 0.12 });
-  fadeEls.forEach(el => {
-    fadeOut(el);
-    observer.observe(el);
-  });
-} else {
-  fadeEls.forEach(fadeIn);
-}
+// Immediately show all sections without scroll-triggered animations
+fadeEls.forEach(fadeIn);
 
 // Touch feedback for interactive elements
 function addTouchFeedback(selector) {
@@ -205,3 +119,34 @@ addTouchFeedback('.tab-btn, .section-card, .socials a');
     p.removeAttribute('hidden');
   });
 })();
+
+// Simple scroll navigation for tab buttons
+// Clicking About / Experience / Skills / Projects / Education scrolls to that section.
+document.addEventListener('DOMContentLoaded', function () {
+  const tabs = Array.from(document.querySelectorAll('.tab-btn'));
+  if (!tabs.length) return;
+
+  const panelMap = new Map();
+  tabs.forEach(tab => {
+    const id = tab.getAttribute('data-tab');
+    if (id) {
+      const panel = document.getElementById(id);
+      if (panel) {
+        panelMap.set(tab, panel);
+      }
+    }
+  });
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', function () {
+      const panel = panelMap.get(tab);
+      if (!panel) return;
+
+      // Visually mark the current tab
+      tabs.forEach(t => t.classList.toggle('active', t === tab));
+
+      // Smooth scroll to section
+      panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+});
