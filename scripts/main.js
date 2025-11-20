@@ -66,21 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-// Greeting based on time
-document.addEventListener('DOMContentLoaded', function() {
-  const aboutTab = document.getElementById('about');
-  if (aboutTab) {
-    const hour = new Date().getHours();
-    let greeting = 'Hello';
-    if (hour < 12) greeting = 'Good morning';
-    else if (hour < 18) greeting = 'Good afternoon';
-    else greeting = 'Hello';
-    const aboutH2 = aboutTab.querySelector('h2');
-    if (aboutH2) {
-      aboutH2.innerHTML = `${greeting}, I’m Parikshit.`;
-    }
-  }
-});
+// Greeting based on time (disabled, keep About heading static)
 
 // Parallax effect for project cards
 // Project card parallax disabled for performance
