@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Parikshit Kumar | ML Engineer</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-  <link rel="preload" as="image" href="./assets/logo.png">
   <link rel="stylesheet" href="css/tailwind-build.css">
   <link rel="canonical" href="https://parikshitkumar1.github.io/">
   <meta name="description" content="Parikshit Kumar, Machine Learning Engineer specializing in Generative AI, Computer Vision, and Data Science. Projects, publications, and experience.">
@@ -43,7 +42,6 @@
   <script defer data-domain="parikshitkumar1.github.io" src="https://plausible.io/js/script.js"></script>
 </head>
 <body>
-  <a class="skip-link" href="#content">Skip to content</a>
   <div class="container">
     <div class="sidebar">
       <div class="name">Parikshit Kumar</div>
@@ -72,20 +70,20 @@
           <path d="M2 9 Q22 2 45 9 T88 9" stroke="#1bc6c4" stroke-width="2.5" fill="none" opacity="0.7"/>
         </svg>
       </div>
-      <div class="tabs" role="tablist" aria-label="Primary tabs">
-        <button class="tab-btn active" id="tab-about" role="tab" aria-selected="true" aria-controls="about" data-tab="about">About</button>
-        <button class="tab-btn" id="tab-experience" role="tab" aria-selected="false" aria-controls="experience" data-tab="experience">Experience</button>
-        <button class="tab-btn" id="tab-skills" role="tab" aria-selected="false" aria-controls="skills" data-tab="skills">Skills</button>
-        <button class="tab-btn" id="tab-projects" role="tab" aria-selected="false" aria-controls="projects" data-tab="projects">Projects & Papers</button>
-        <button class="tab-btn" id="tab-education" role="tab" aria-selected="false" aria-controls="education" data-tab="education">Education</button>
-      </div>
-      <div class="tab-content active" id="about" role="tabpanel" aria-labelledby="tab-about" tabindex="0">
+      <nav class="tabs" aria-label="Page sections">
+        <a class="tab-btn" href="#about">About</a>
+        <a class="tab-btn" href="#experience">Experience</a>
+        <a class="tab-btn" href="#skills">Skills</a>
+        <a class="tab-btn" href="#projects">Projects &amp; Papers</a>
+        <a class="tab-btn" href="#education">Education</a>
+      </nav>
+      <div class="tab-content active" id="about" role="tabpanel" tabindex="0">
         <h2 class="tw-text-3xl tw-font-semibold tw-text-primary">About Me</h2>
         <p>
           I build and ship machine learning systems that live in real products, not just notebooks. My work spans generative models, computer vision and data platforms, from early prototypes through to production rollouts. I care about reliability, latency and visibility as much as raw model quality, and I like working close to the people who use the system. Most days I am turning vague ideas into concrete experiments, milestones and deployments that move a product forward.
         </p>
       </div>
-      <div class="tab-content" id="experience" role="tabpanel" aria-labelledby="tab-experience" tabindex="0" hidden>
+      <div class="tab-content" id="experience" role="tabpanel" tabindex="0">
         <h2 class="tw-text-3xl tw-font-semibold tw-text-primary" style="text-align:center;">Experience</h2>
         <div class="timeline-container">
           <div class="timeline">
@@ -156,7 +154,7 @@
           </div>
         </div>
       </div>
-      <div class="tab-content" id="skills" role="tabpanel" aria-labelledby="tab-skills" tabindex="0" hidden>
+      <div class="tab-content" id="skills" role="tabpanel" tabindex="0">
         <h2 class="tw-text-3xl tw-font-semibold tw-text-primary">Skills</h2>
         <div>
           <div>
@@ -218,7 +216,7 @@
           </div>
         </div>
       </div>
-      <div class="tab-content" id="projects" role="tabpanel" aria-labelledby="tab-projects" tabindex="0" hidden>
+      <div class="tab-content" id="projects" role="tabpanel" tabindex="0">
         <h2 class="tw-text-3xl tw-font-semibold tw-text-primary">Projects & Papers</h2>
         <div class="projects-grid">
           <article class="project-card project-parallax">
@@ -295,14 +293,14 @@
             <ul>
               <li>Created a personal LLM application fine-tuned on a Final Fantasy character dataset for daily assistance.</li>
               <li>Allows users to select their favorite character as their AI helper for a personalized experience.</li>
-              <li>Utilizes the totl llama framework for efficient model serving and interaction.</li>
+              <li>Utilizes the llama.cpp framework for efficient local model serving and interaction.</li>
               <li>Supports context-aware responses and task automation tailored to user preferences.</li>
               <li>Designed for privacy, running locally without cloud dependencies.</li>
             </ul>
             <div class="project-tags">
               <span class="tag">Python</span>
               <span class="tag">LLM</span>
-              <span class="tag">totl llama</span>
+              <span class="tag">llama.cpp</span>
               <span class="tag">Final Fantasy</span>
               <span class="tag">Personal Assistant</span>
               <span class="tag">NLP</span>
@@ -331,14 +329,14 @@
               <span class="tag">2025</span>
             </div>
             <div class="project-actions">
-              <a class="btn" href="https://github.com/parikshitkumar1/fundpilot" target="_blank" rel="noopener">
+              <a class="btn" href="https://github.com/parikshitkumar1/FormScribe" target="_blank" rel="noopener">
                 <i class="bi bi-github"></i> <span>Code on GitHub</span>
               </a>
             </div>
           </article>
         </div>
       </div>
-      <div class="tab-content" id="education" role="tabpanel" aria-labelledby="tab-education" tabindex="0" hidden>
+      <div class="tab-content" id="education" role="tabpanel" tabindex="0">
         <h2 class="tw-text-3xl tw-font-semibold tw-text-primary" style="text-align:center;">Education</h2>
         <div class="timeline-container">
           <div class="timeline">
@@ -359,9 +357,7 @@
       </div>
     </div>
   </div>
-  <footer style="width:100%;text-align:center;padding:2em 0 1.2em 0;color:var(--text-muted);font-size:1em;letter-spacing:0.01em;">
-    Updated: June 2025 &nbsp;|&nbsp; © 2025 Parikshit Kumar &nbsp;|&nbsp; Made in California <span class="footer-emoji">☀️</span> with a dash of code and <span class="footer-emoji">☕️</span>
-  </footer>
+  <footer style="width:100%;text-align:center;padding:2em 0 1.2em 0;color:var(--text-muted);font-size:1em;letter-spacing:0.01em;"></footer>
   <script src="scripts/main.js" defer></script>
   
 </body>

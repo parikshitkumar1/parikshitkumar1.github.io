@@ -96,43 +96,21 @@ function addTouchFeedback(selector) {
 }
 addTouchFeedback('.tab-btn, .section-card, .socials a');
 
-// In the minimalist layout, show all sections at once instead of toggling tabs.
-// Keep ARIA markup but ensure every panel is visible.
-(function initStaticSections() {
-  const panels = Array.from(document.querySelectorAll('[role="tabpanel"]'));
-  panels.forEach(p => {
-    p.classList.add('active');
-    p.removeAttribute('hidden');
-  });
-})();
-
-// Simple scroll navigation for tab buttons
-// Clicking About / Experience / Skills / Projects / Education scrolls to that section.
+// Highlight active nav link based on scroll position
 document.addEventListener('DOMContentLoaded', function () {
-  const tabs = Array.from(document.querySelectorAll('.tab-btn'));
-  if (!tabs.length) return;
+  const links = Array.from(document.querySelectorAll('.tab-btn'));
+  const sections = links.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
 
-  const panelMap = new Map();
-  tabs.forEach(tab => {
-    const id = tab.getAttribute('data-tab');
-    if (id) {
-      const panel = document.getElementById(id);
-      if (panel) {
-        panelMap.set(tab, panel);
-      }
-    }
-  });
-
-  tabs.forEach(tab => {
-    tab.addEventListener('click', function () {
-      const panel = panelMap.get(tab);
-      if (!panel) return;
-
-      // Visually mark the current tab
-      tabs.forEach(t => t.classList.toggle('active', t === tab));
-
-      // Smooth scroll to section
-      panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  function onScroll() {
+    let current = sections[0];
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 80) current = s;
     });
-  });
+    links.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current.id);
+    });
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
 });
