@@ -36,9 +36,8 @@ document.addEventListener('DOMContentLoaded', function() {
   const footer = document.querySelector('footer');
   if (footer) {
     const now = new Date();
-    const month = now.toLocaleString('default', { month: 'long' });
     const year = now.getFullYear();
-    // Use CSS for the insert coin effect instead
+    footer.innerHTML = `&copy; ${year} Parikshit Kumar`;
   }
 });
 
