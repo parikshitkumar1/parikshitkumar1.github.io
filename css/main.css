@@ -1,406 +1,469 @@
 :root {
-  --primary-blue: #0ea5b5;
-  --text-muted: #6b7280;
-  --border: #e5e7eb;
-  --radius: 18px;
+  --primary: #00ff41; /* CRT Green */
+  --secondary: #ff00ff; /* Magenta */
+  --bg-color: #000000;
+  --panel-bg: #111111;
+  --text-main: #e0e0e0;
+  --text-muted: #888888;
+  --border: #333333;
+  --radius: 0px; /* Blocky edges for retro feel */
+  --shadow: 4px 4px 0px #333333;
+  --shadow-hover: 6px 6px 0px var(--primary);
 }
 
-/* Minimalist single-column layout */
+/* Base Layout & CRT Effect */
 html, body {
-  background: #ffffff;
-  color: #111827;
-  background-image: none;
-  background-attachment: scroll;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  margin: 0;
+  padding: 0;
   width: 100%;
-  height: auto;
-  min-height: 100vh;
+  height: 100vh;
   overflow-x: hidden;
-  overflow-y: auto;
-}
-
-body {
-  font-family: -apple-system, BlinkMacSystemFont, system-ui, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
-  font-size: 16px;
+  font-family: 'Space Mono', monospace;
+  font-size: 14px;
   line-height: 1.6;
-  letter-spacing: -0.01em;
 }
 
+body::before {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(
+      rgba(18, 16, 16, 0) 50%,
+      rgba(0, 0, 0, 0.25) 50%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 0, 0, 0.06),
+      rgba(0, 255, 0, 0.02),
+      rgba(0, 0, 255, 0.06)
+    );
+  z-index: 2;
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
+}
+
+/* Headings */
+h1, h2, h3, .name {
+  font-family: 'Press Start 2P', cursive;
+  text-transform: uppercase;
+  font-weight: normal;
+  line-height: 1.4;
+}
+
+h2 {
+  font-size: 1.2rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 0px rgba(0,255,65,0.3);
+}
+
+h3 {
+  font-size: 0.9rem;
+  color: var(--secondary);
+  margin-bottom: 0.5rem;
+}
+
+/* Container & Sidebar */
 .container {
-  max-width: 720px;
-  margin: 80px auto 72px;
-  padding: 0 24px;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  position: relative;
+  z-index: 10;
 }
 
 .sidebar {
+  border: 2px solid var(--primary);
+  background-color: var(--panel-bg);
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  gap: 0.25rem;
-  padding: 0 0 32px 0;
+  align-items: center;
+  text-align: center;
 }
 
 .profile-img {
-  width: 56px;
-  height: 56px;
-  border-radius: 999px;
-  margin-bottom: 0.75rem;
-  border: 1px solid var(--border);
-  box-shadow: none;
+  width: 100px;
+  height: 100px;
+  border-radius: 0;
+  border: 2px solid var(--primary);
+  margin-bottom: 1rem;
+  image-rendering: pixelated;
 }
 
 .name {
-  font-size: 1.125rem;
-  font-weight: 600;
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
 }
 
 .subtitle {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: var(--text-muted);
+  margin-bottom: 1rem;
 }
 
 .socials {
-  font-size: 0.9rem;
-  gap: 1rem;
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.2rem;
 }
 
+.socials a {
+  color: var(--text-main);
+  transition: all 0.2s;
+}
+
+.socials a:hover {
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+/* Main Content Area */
 .main-content {
   background: transparent;
-  border-radius: 0;
-  border: none;
-  padding: 0;
-  box-shadow: none;
-  color: #111827;
+  color: var(--text-main);
 }
 
-.hero {
-  background: transparent;
-  border: none;
-  padding: 0;
-  margin-bottom: 32px;
-  box-shadow: none;
-}
-
-.hero h1 {
-  font-size: 0.95rem;
-  font-weight: 400;
-  color: var(--text-muted);
-}
-
-.section-divider {
-  height: auto;
-  margin: 24px 0;
-}
-
-.section-divider svg {
-  display: none;
-}
-
+/* Custom Tabs */
 .tabs {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  margin: 24px 0 8px;
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  justify-content: flex-start;
+  gap: 10px;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+.tab-btn {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.7rem;
+  background: var(--panel-bg);
+  color: var(--text-main);
+  border: 2px solid var(--border);
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: var(--shadow);
+}
+
+.tab-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.tab-btn.tab-active {
+  background: var(--primary);
+  color: var(--bg-color);
+  border-color: var(--primary);
 }
 
 .tab-content {
-  display: block !important;
-  margin: 32px 0;
+  display: none;
+  background: var(--panel-bg);
+  border: 2px solid var(--border);
+  padding: 25px;
+  box-shadow: var(--shadow);
+  margin-bottom: 20px;
+  animation: fadeIn 0.3s ease-in-out;
 }
 
-.tab-content h2 {
-  font-size: 1.02rem;
-  font-weight: 600;
-  text-transform: none;
-  letter-spacing: 0.02em;
-  color: #111827;
-  margin-bottom: 0.4rem;
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-.main-content p {
-  max-width: 60ch;
-  margin: 0 0 0.85rem 0;
-  color: #111827;
+/* Lists and Typography */
+ul {
+  list-style: none;
+  padding-left: 0;
 }
 
-.main-content ul {
-  list-style: disc;
-  padding-left: 1.4rem;
-  margin: 0.25rem 0 1.2rem 0;
+li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.8rem;
 }
 
-.main-content li {
-  margin: 0.15rem 0;
-  line-height: 1.5;
+li::before {
+  content: ">";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-weight: bold;
 }
 
-/* Skills as simple bullet lists */
-.skills-grid {
-  display: block;
-  margin: 0.35rem 0 1.2rem;
+p {
+  margin-bottom: 1rem;
 }
 
+/* Skills Section */
 .skills-label {
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: #111827;
-  margin-top: 0.8rem;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin: 1.5rem 0 1rem;
+  border-bottom: 2px dashed var(--border);
+  padding-bottom: 5px;
 }
 
-.skills-label:first-of-type {
-  margin-top: 0.3rem;
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .skill-card {
   background: transparent;
-  border: none;
-  box-shadow: none;
-  padding: 0;
-  color: #111827;
-  display: list-item;
-  list-style: disc;
-  margin-left: 1.4rem;
-  font-size: 0.95rem;
+  border: 1px solid var(--border);
+  padding: 5px 10px;
+  font-size: 0.85rem;
+  color: var(--text-main);
+  transition: all 0.2s;
 }
 
-.skill-card strong {
-  color: inherit;
+.skill-card:hover {
+  border-color: var(--secondary);
+  color: var(--secondary);
+  box-shadow: 2px 2px 0px rgba(255,0,255,0.3);
 }
 
-/* Experience / education timeline -> flat blocks */
+/* Timeline / Experience */
 .timeline-container {
   padding: 0;
 }
 
 .timeline {
-  border: none;
-  margin: 0;
-  padding: 0;
+  border-left: 2px dashed var(--border);
+  padding-left: 20px;
+  margin-left: 10px;
 }
 
 .timeline-event {
-  margin: 0 0 20px 0;
-  position: static;
+  position: relative;
+  margin-bottom: 30px;
 }
 
-.timeline-dot {
-  display: none;
+.timeline-event::before {
+  content: "";
+  position: absolute;
+  left: -27px;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  background: var(--bg-color);
+  border: 2px solid var(--primary);
+  border-radius: 0;
 }
 
 .section-card {
-  padding: 0;
-  border: none;
-  background: transparent;
-  box-shadow: none;
+  padding: 15px;
+  border: 1px solid var(--border);
+  background: rgba(17, 17, 17, 0.8);
+  transition: all 0.2s;
+}
+
+.section-card:hover {
+  border-color: var(--primary);
+  box-shadow: 4px 4px 0px rgba(0,255,65,0.2);
 }
 
 .section-card h3 {
-  font-size: 1rem;
-  font-weight: 500;
-  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+  margin-top: 0;
 }
 
 .section-card p {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: var(--text-muted);
+  margin-bottom: 10px;
 }
 
-/* Projects -> simple stacked blocks */
+/* Projects */
 .projects-grid {
-  display: block;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
 }
 
 .project-card {
-  border: none;
-  background: transparent;
-  padding: 0.4rem 0 1.4rem 0;
-  box-shadow: none;
+  border: 2px solid var(--border);
+  padding: 20px;
+  background: var(--panel-bg);
+  transition: all 0.2s;
+  position: relative;
 }
 
-.project-card h3,
-.project-card strong {
-  font-size: 1rem;
-  font-weight: 500;
-  margin: 0 0 0.15rem 0;
-  color: #111827;
+.project-card:hover {
+  border-color: var(--secondary);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
 }
 
 .project-meta {
-  font-size: 0.82rem;
+  font-size: 0.75rem;
   color: var(--text-muted);
-  margin-bottom: 0.25rem;
+  margin-bottom: 15px;
+  font-family: 'Press Start 2P', cursive;
 }
 
 .project-tags {
-  margin-top: 0.3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 15px;
 }
 
 .tag {
+  font-size: 0.7rem;
   background: transparent;
-  padding: 0;
-  border-radius: 0;
-  font-size: 0.82rem;
-  color: var(--primary-blue);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  padding: 3px 8px;
 }
 
-/* Buttons behave like text links */
-.btn,
-.btn-primary,
-.btn-secondary {
-  appearance: none;
-  border: none;
-  background: transparent;
-  color: var(--primary-blue);
-  padding: 0;
-  border-radius: 0;
-  font-weight: 400;
-  box-shadow: none;
+.project-actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
 }
 
-.btn:hover,
-.btn-primary:hover,
-.btn-secondary:hover {
-  transform: none;
-  box-shadow: none;
-  text-decoration: underline;
-}
-
-footer {
-  border-top: 1px solid var(--border);
-  margin-top: 32px;
-}
-
-.tab-content + .tab-content {
-  border-top: 1px solid var(--border);
-  padding-top: 24px;
-}
-
-.tab-btn {
-  font-size: 0.75rem;
-  font-weight: 400;
-  color: var(--text-muted);
+/* Buttons */
+.btn {
+  display: inline-block;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.65rem;
   text-decoration: none;
-}
-
-.tab-btn.active,
-.tab-btn:focus {
   background: transparent;
-  color: var(--primary-blue);
+  color: var(--text-main);
+  border: 2px solid var(--text-main);
+  padding: 8px 12px;
+  text-transform: uppercase;
+  transition: all 0.2s;
+  cursor: pointer;
 }
 
-.tab-btn::after {
-  display: none !important;
+.btn:hover {
+  background: var(--text-main);
+  color: var(--bg-color);
 }
 
-/* Make tools list two-column on wider screens for easier scanning */
-.skills-grid-tools {
-  column-count: 2;
-  column-gap: 2.2rem;
+.btn-secondary {
+  border-color: var(--secondary);
+  color: var(--secondary);
 }
 
-.skills-grid-tools .skill-card {
-  break-inside: avoid;
+.btn-secondary:hover {
+  background: var(--secondary);
+  color: var(--bg-color);
 }
 
-.skills-grid-tech {
-  column-count: 2;
-  column-gap: 2.2rem;
+/* Animated SVGs Background Elements */
+.bg-svg {
+  position: fixed;
+  z-index: 0;
+  opacity: 0.15;
+  pointer-events: none;
 }
 
-.skills-grid-tech .skill-card {
-  break-inside: avoid;
+.svg-space-invader {
+  width: 100px;
+  top: 10%;
+  left: -120px;
+  animation: moveRight 20s linear infinite;
 }
 
-/* Ensure skills are body-colored, not teal */
-.skills-grid .skill-card strong {
-  color: inherit;
+.svg-pacman {
+  width: 80px;
+  bottom: 15%;
+  right: -100px;
+  animation: moveLeft 15s linear infinite;
 }
 
-@media (max-width: 700px) {
-  .skills-grid-tools {
-    column-count: 1;
-  }
+.svg-ghost {
+  width: 60px;
+  top: 40%;
+  right: -80px;
+  animation: floatAround 18s ease-in-out infinite;
 }
 
-/* Remove card-like hover effects while keeping focus styles */
-.section-card:hover {
-  box-shadow: none;
-  transform: none;
-  border-color: transparent;
-  background: transparent;
+@keyframes moveRight {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(100vw + 200px)); }
 }
 
-.socials a:hover {
-  transform: none;
-  box-shadow: none;
-  background: transparent;
+@keyframes moveLeft {
+  0% { transform: translateX(0) scaleX(-1); }
+  100% { transform: translateX(calc(-100vw - 200px)) scaleX(-1); }
 }
 
-.tw-text-primary:hover,
-.tag:hover {
-  animation: none;
-  filter: none;
+@keyframes floatAround {
+  0% { transform: translate(0, 0) scaleX(-1); }
+  25% { transform: translate(-30vw, 100px) scaleX(-1); }
+  50% { transform: translate(-60vw, -50px) scaleX(-1); }
+  75% { transform: translate(-90vw, 50px) scaleX(-1); }
+  100% { transform: translate(calc(-100vw - 100px), 0) scaleX(-1); }
 }
 
-@media (max-width: 700px) {
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
   .container {
-    margin: 32px auto 32px;
-    padding: 0 18px;
+    padding: 15px;
+    margin: 20px auto;
   }
-
-  body {
-    font-size: 15px;
-    line-height: 1.6;
-    letter-spacing: 0.01em;
+  
+  .sidebar {
+    padding: 15px;
   }
-
-  .tabs {
-    margin: 16px 0 4px;
-    font-size: 0.78rem;
+  
+  .name {
+    font-size: 1.1rem;
   }
-
-  .tab-content {
-    margin: 24px 0;
-  }
-
-  .skills-grid-tools,
-  .skills-grid-tech {
-    column-count: 1;
-  }
-
-  /* Make tab buttons easier to tap on mobile */
+  
   .tab-btn {
-    font-size: 0.9rem;
-    padding: 0.3em 1.1em;
+    font-size: 0.6rem;
+    padding: 8px 10px;
+    flex: 1 1 calc(50% - 10px);
+    text-align: center;
   }
-
-  /* Ensure timelines are vertical on small screens (no horizontal swipe)
-     so Experience behaves like other sections */
-  .timeline-container {
-    overflow-x: visible;
+  
+  .project-actions {
+    flex-direction: column;
   }
-
-  .timeline {
-    display: block;
-    border-top: none;
-  }
-
-  .timeline-event {
-    min-width: auto;
+  
+  .btn {
+    text-align: center;
   }
 }
 
-/* Force-hide leftover timeline dots everywhere */
-.timeline-dot {
-  display: none !important;
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  border-top: 2px dashed var(--border);
+  margin-top: 40px;
+  position: relative;
+  z-index: 10;
 }
 
-/* Also neutralize Tailwind timeline decorations (lines and circles) */
-.timeline::before,
-.timeline-container::after {
-  content: none !important;
-  display: none !important;
+footer::before {
+  content: "INSERT COIN TO CONTINUE...";
+  animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
 }

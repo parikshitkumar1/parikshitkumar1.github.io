@@ -1,28 +1,4 @@
-// Theme toggle with persistence and system preference
-(function initTheme() {
-  const root = document.documentElement;
-  const btn = document.getElementById('themeToggle');
-  const mq = window.matchMedia('(prefers-color-scheme: light)');
-  const stored = localStorage.getItem('theme');
-  function apply(theme) {
-    if (theme === 'light') {
-      root.setAttribute('data-theme', 'light');
-      if (btn) { btn.setAttribute('aria-pressed', 'true'); btn.textContent = '☀️ Light theme'; }
-    } else {
-      root.removeAttribute('data-theme');
-      if (btn) { btn.setAttribute('aria-pressed', 'false'); btn.textContent = '🌙 Dark theme'; }
-    }
-  }
-  let current = stored || (mq.matches ? 'light' : 'dark');
-  apply(current);
-  if (btn) {
-    btn.addEventListener('click', () => {
-      current = current === 'light' ? 'dark' : 'light';
-      localStorage.setItem('theme', current);
-      apply(current);
-    });
-  }
-})();
+// Theme toggle removed, forcing dark mode
 
 // Parallax effect on scroll (throttled + disabled on touch/reduced-motion)
 // Parallax background disabled for faster paint
@@ -62,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const now = new Date();
     const month = now.toLocaleString('default', { month: 'long' });
     const year = now.getFullYear();
-    footer.innerHTML = `Updated: ${month} ${year} &nbsp;|&nbsp; © ${year} Parikshit Kumar &nbsp;|&nbsp; Made in California <span class="footer-emoji">☀️</span> with a dash of code and <span class="footer-emoji">☕️</span>`;
+    // Use CSS for the insert coin effect instead
   }
 });
 
