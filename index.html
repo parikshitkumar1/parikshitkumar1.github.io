@@ -34,28 +34,11 @@
   }
   </script>
   <link rel="stylesheet" href="css/main.css">
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <!-- Plausible Analytics (privacy-friendly) -->
   <script defer data-domain="parikshitkumar1.github.io" src="https://plausible.io/js/script.js"></script>
 </head>
 <body>
-  <!-- Animated Background SVGs -->
-  <svg class="bg-svg svg-space-invader" viewBox="0 0 11 8" fill="#00ff41" xmlns="http://www.w3.org/2000/svg">
-    <path d="M2,0 L3,0 L3,1 L4,1 L4,0 L7,0 L7,1 L8,1 L8,0 L9,0 L9,1 L11,1 L11,2 L11,3 L11,4 L10,4 L10,5 L8,5 L8,4 L9,4 L9,3 L8,3 L8,2 L3,2 L3,3 L2,3 L2,4 L3,4 L3,5 L1,5 L1,4 L0,4 L0,3 L0,2 L0,1 L2,1 L2,0 Z M2,2 L3,2 L3,3 L2,3 L2,2 Z M8,2 L9,2 L9,3 L8,3 L8,2 Z M2,5 L2,6 L3,6 L3,7 L2,7 L2,8 L0,8 L0,7 L1,7 L1,6 L2,6 L2,5 Z M9,5 L9,6 L10,6 L10,7 L11,7 L11,8 L9,8 L9,7 L8,7 L8,6 L9,6 L9,5 Z M4,6 L5,6 L5,7 L6,7 L6,6 L7,6 L7,5 L4,5 L4,6 Z" />
-  </svg>
-  <svg class="bg-svg svg-pacman" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-    <path fill="#ffff00" d="M50,50 L100,20 A50,50 0 1,0 100,80 Z">
-      <animate attributeName="d" values="M50,50 L100,20 A50,50 0 1,0 100,80 Z; M50,50 L100,50 A50,50 0 1,0 100,50 Z; M50,50 L100,20 A50,50 0 1,0 100,80 Z" dur="0.5s" repeatCount="indefinite" />
-    </path>
-  </svg>
-  <svg class="bg-svg svg-ghost" viewBox="0 0 14 14" fill="#ff00ff" xmlns="http://www.w3.org/2000/svg">
-    <path d="M7,0 C3.134,0 0,3.134 0,7 L0,14 L2,12 L4,14 L7,12 L10,14 L12,12 L14,14 L14,7 C14,3.134 10.866,0 7,0 Z" />
-    <circle cx="4" cy="5" r="1.5" fill="white" />
-    <circle cx="10" cy="5" r="1.5" fill="white" />
-    <circle cx="4.5" cy="5" r="0.5" fill="#0000ff" />
-    <circle cx="10.5" cy="5" r="0.5" fill="#0000ff" />
-  </svg>
-
   <div class="container">
     <div class="sidebar">
       <div class="name">Parikshit Kumar</div>
@@ -76,23 +59,26 @@
       </div>
     </div>
     <div class="main-content" id="content">
+      <div class="ambient-bg" aria-hidden="true">
+        <svg class="ambient-orbit" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="120" cy="120" r="88" stroke="currentColor" stroke-width="1.2" opacity="0.35"/>
+          <circle cx="120" cy="120" r="54" stroke="currentColor" stroke-width="1" opacity="0.2"/>
+          <path d="M34 120C34 72.58 72.58 34 120 34C167.42 34 206 72.58 206 120" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity="0.45"/>
+          <circle cx="206" cy="120" r="3" fill="currentColor" opacity="0.55"/>
+        </svg>
+      </div>
       <section class="hero" aria-labelledby="hero-heading">
         <h1 id="hero-heading">Engineering AI systems for scale and impact.</h1>
       </section>
-      <div class="section-divider">
-        <svg viewBox="0 0 90 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M2 9 Q22 2 45 9 T88 9" stroke="#1bc6c4" stroke-width="2.5" fill="none" opacity="0.7"/>
-        </svg>
-      </div>
       <nav class="tabs" aria-label="Page sections">
-        <a class="tab-btn" href="#about">Profile</a>
-        <a class="tab-btn" href="#experience">Track Record</a>
-        <a class="tab-btn" href="#skills">Stack</a>
-        <a class="tab-btn" href="#projects">Work &amp; Research</a>
-        <a class="tab-btn" href="#education">Background</a>
+        <a class="tab-btn" href="#about">About</a>
+        <a class="tab-btn" href="#experience">Experience</a>
+        <a class="tab-btn" href="#skills">Skills</a>
+        <a class="tab-btn" href="#projects">Projects</a>
+        <a class="tab-btn" href="#education">Education</a>
       </nav>
       <div class="tab-content active" id="about" role="tabpanel" tabindex="0">
-        <h2 class="tw-text-3xl tw-font-semibold tw-text-primary">Profile</h2>
+        <h2 class="tw-text-3xl tw-font-semibold tw-text-primary">About</h2>
         <p>
           I design and deploy machine learning architectures that operate reliably in demanding environments. My focus bridges generative modeling, computer vision, and robust data infrastructure—taking complex requirements from initial architecture through to production scale.
         </p>
@@ -101,7 +87,7 @@
         </p>
       </div>
       <div class="tab-content" id="experience" role="tabpanel" tabindex="0">
-        <h2 class="tw-text-3xl tw-font-semibold tw-text-primary" style="text-align:center;">Track Record</h2>
+        <h2 class="tw-text-3xl tw-font-semibold tw-text-primary" style="text-align:center;">Experience</h2>
         <div class="timeline-container">
           <div class="timeline">
             <div class="timeline-event recent">
@@ -163,7 +149,7 @@
         </div>
       </div>
       <div class="tab-content" id="skills" role="tabpanel" tabindex="0">
-        <h2 class="tw-text-3xl tw-font-semibold tw-text-primary">Stack</h2>
+        <h2 class="tw-text-3xl tw-font-semibold tw-text-primary">Skills</h2>
         <div>
           <div>
             <div class="skills-label">Core Capabilities</div>
@@ -225,11 +211,11 @@
         </div>
       </div>
       <div class="tab-content" id="projects" role="tabpanel" tabindex="0">
-        <h2 class="tw-text-3xl tw-font-semibold tw-text-primary">Work & Research</h2>
+        <h2 class="tw-text-3xl tw-font-semibold tw-text-primary">Projects</h2>
         <div class="projects-grid">
           <article class="project-card project-parallax">
             <h3>ApollodB: Psychoacoustic EQ Generation System</h3>
-            <div class="project-meta">SOTA Project ? 2024 to Present</div>
+            <div class="project-meta">SOTA Project - 2024 to Present</div>
             <ul>
               <li>Architected a TensorFlow-based psychoacoustic EQ generator, deployed on Google Cloud, achieving state-of-the-art metrics on the DEAM dataset.</li>
               <li>Engineered custom neural networks that output highly personalized audio profiles grounded in psychoacoustic principles.</li>
@@ -252,7 +238,7 @@
 
           <article class="project-card project-parallax">
             <h3>Generative Networks and VAEs to Assist Artists</h3>
-            <div class="project-meta">SRM IST ? Jan 2023 to Jun 2023</div>
+            <div class="project-meta">SRM IST - Jan 2023 to Jun 2023</div>
             <ul>
               <li>Developed Variational Autoencoders (VAEs) for sketch refinement, demonstrating a 30% improvement in artist workflow efficiency.</li>
               <li>Hit 90.6% accuracy on the CUHK Face Sketch Database; presented findings at ICCET 2023.</li>
@@ -272,7 +258,7 @@
 
           <article class="project-card project-parallax">
             <h3>Energy Price Forecasting Using LSTMs and ARIMA</h3>
-            <div class="project-meta">SATU ? 2022</div>
+            <div class="project-meta">SATU - 2022</div>
             <ul>
               <li>Built hybrid LSTM/ARIMA forecasting pipelines, lifting prediction accuracy by 18% on complex Australian energy datasets.</li>
               <li>Integrated NLP-driven trend analysis to surface broader market context for key stakeholders.</li>
@@ -328,7 +314,7 @@
         </div>
       </div>
       <div class="tab-content" id="education" role="tabpanel" tabindex="0">
-        <h2 class="tw-text-3xl tw-font-semibold tw-text-primary" style="text-align:center;">Background</h2>
+        <h2 class="tw-text-3xl tw-font-semibold tw-text-primary" style="text-align:center;">Education</h2>
         <div class="timeline-container">
           <div class="timeline">
             <div class="timeline-event">
