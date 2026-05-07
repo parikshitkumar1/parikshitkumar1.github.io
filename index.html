@@ -34,308 +34,321 @@
   }
   </script>
   <link rel="stylesheet" href="css/main.css">
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <!-- Plausible Analytics (privacy-friendly) -->
   <script defer data-domain="parikshitkumar1.github.io" src="https://plausible.io/js/script.js"></script>
 </head>
 <body>
-  <div class="container">
-    <div class="sidebar">
-      <div class="name">Parikshit Kumar</div>
-      <div class="subtitle">Machine Learning | Generative AI | Computer Vision | Data Science</div>
-      <div class="socials">
-        <a href="https://github.com/parikshitkumar1" class="link" title="GitHub" target="_blank">
-          <i class="bi bi-github"></i>
-          <span>GitHub</span>
-        </a>
-        <a href="https://www.linkedin.com/in/parikshitkumar1" class="link" title="LinkedIn" target="_blank">
-          <i class="bi bi-linkedin"></i>
-          <span>LinkedIn</span>
-        </a>
-        <a href="mailto:mr.kumar.parikshit@gmail.com" class="link" title="Email">
-          <i class="bi bi-envelope-at-fill"></i>
-          <span>Email</span>
-        </a>
-      </div>
-    </div>
-    <div class="main-content" id="content">
-      <div class="ambient-bg" aria-hidden="true">
-        <svg class="ambient-orbit" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="120" cy="120" r="88" stroke="currentColor" stroke-width="1.2" opacity="0.35"/>
-          <circle cx="120" cy="120" r="54" stroke="currentColor" stroke-width="1" opacity="0.2"/>
-          <path d="M34 120C34 72.58 72.58 34 120 34C167.42 34 206 72.58 206 120" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity="0.45"/>
-          <circle cx="206" cy="120" r="3" fill="currentColor" opacity="0.55"/>
-        </svg>
-      </div>
-      <section class="hero" aria-labelledby="hero-heading">
-        <h1 id="hero-heading">Engineering AI systems for scale and impact.</h1>
-      </section>
-      <nav class="tabs" aria-label="Page sections">
-        <a class="tab-btn" href="#about">About</a>
-        <a class="tab-btn" href="#experience">Experience</a>
-        <a class="tab-btn" href="#skills">Skills</a>
-        <a class="tab-btn" href="#projects">Projects</a>
-        <a class="tab-btn" href="#education">Education</a>
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="header-name" href="#">Parikshit Kumar</a>
+      <nav class="header-nav" aria-label="Main navigation">
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#experience">Experience</a>
+        <a class="nav-link" href="#skills">Skills</a>
+        <a class="nav-link" href="#projects">Projects</a>
+        <a class="nav-link" href="#education">Education</a>
       </nav>
-      <div class="tab-content active" id="about" role="tabpanel" tabindex="0">
-        <h2 class="tw-text-3xl tw-font-semibold tw-text-primary">About</h2>
-        <p>
-          I design and deploy machine learning architectures that operate reliably in demanding environments. My focus bridges generative modeling, computer vision, and robust data infrastructure—taking complex requirements from initial architecture through to production scale.
-        </p>
-        <p>
-          I prioritize system resilience, latency optimization, and observable metrics just as highly as algorithmic performance. Leading engineering efforts means I work closely with cross-functional teams to ensure the solutions we build directly address core business challenges. Day to day, I translate ambiguous problems into structured technical roadmaps and deliver systems that drive measurable outcomes.
-        </p>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="hero-inner">
+        <p class="hero-label">CHIEF AI ENGINEER · GENERATIVE AI · COMPUTER VISION</p>
+        <h1 class="hero-heading">Architecting AI systems<br>that define what's next.</h1>
+        <p class="hero-sub">Five years building production-grade ML across computer vision, generative AI, and large-scale data systems—from first principles to deployed product.</p>
+        <div class="hero-socials">
+          <a href="https://github.com/parikshitkumar1" class="social-link" title="GitHub" target="_blank" rel="noopener">
+            <i class="bi bi-github"></i><span>GitHub</span>
+          </a>
+          <a href="https://www.linkedin.com/in/parikshitkumar1" class="social-link" title="LinkedIn" target="_blank" rel="noopener">
+            <i class="bi bi-linkedin"></i><span>LinkedIn</span>
+          </a>
+          <a href="mailto:mr.kumar.parikshit@gmail.com" class="social-link" title="Email">
+            <i class="bi bi-envelope-at-fill"></i><span>Email</span>
+          </a>
+        </div>
       </div>
-      <div class="tab-content" id="experience" role="tabpanel" tabindex="0">
-        <h2 class="tw-text-3xl tw-font-semibold tw-text-primary" style="text-align:center;">Experience</h2>
-        <div class="timeline-container">
-          <div class="timeline">
-            <div class="timeline-event recent">
-              <div class="section-card">
-                <h3 class="tw-text-2xl tw-text-primary">Chief AI Engineer, Plexor</h3>
-                <p class="tw-text-gray-500">Oct 2025 to Present</p>
-                <ul class="tw-list-disc">
-                  <li>Direct the architecture and deployment of real-time object detection and vision-language models for retail surveillance.</li>
-                  <li>Design fault-tolerant edge AI pipelines that operate reliably in constrained store environments.</li>
-                  <li>Push the boundaries of detection precision, establishing new benchmarks for the platform's vision capabilities.</li>
-                </ul>
-              </div>
+      <div class="hero-rule" aria-hidden="true"></div>
+    </section>
+
+    <section class="content-section reveal" id="about">
+      <div class="section-inner">
+        <div class="section-header">
+          <span class="section-label">BACKGROUND</span>
+          <h2 class="section-heading">About</h2>
+        </div>
+        <div class="section-body">
+          <p>I build machine learning systems that work in the real world—not just benchmarks. My focus spans real-time computer vision, generative modeling, and robust data infrastructure, taking complex requirements from architecture through to production at scale.</p>
+          <p>I lead engineering at the intersection of research and product: driving system resilience, optimizing for latency, keeping metrics observable. I translate ambiguous problems into structured technical plans and deliver systems that move the needle on core business outcomes.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section reveal" id="experience">
+      <div class="section-inner">
+        <div class="section-header">
+          <span class="section-label">WORK HISTORY</span>
+          <h2 class="section-heading">Experience</h2>
+        </div>
+        <div class="timeline">
+          <div class="timeline-event timeline-event--recent reveal-child">
+            <div class="timeline-meta"><span class="timeline-date">Oct 2025 — Present</span></div>
+            <div class="timeline-body">
+              <h3 class="timeline-role">Chief AI Engineer</h3>
+              <p class="timeline-org">Plexor</p>
+              <ul>
+                <li>Own the architecture and deployment of real-time object detection and vision-language models for retail surveillance.</li>
+                <li>Built fault-tolerant edge AI pipelines that hold under constrained, adversarial store conditions.</li>
+                <li>Established new detection precision benchmarks for the platform's core vision capability.</li>
+              </ul>
             </div>
-            <div class="timeline-event">
-              <div class="section-card">
-                <h3 class="tw-text-2xl tw-text-primary">Junior Specialist, University of California, Riverside</h3>
-                <p class="tw-text-gray-500">Jul 2024 to May 2025</p>
-                <ul class="tw-list-disc">
-                  <li>Developed deep learning classifiers for mosquito orientation, reaching 96% accuracy.</li>
-                  <li>Built robust image processing workflows utilizing thresholding and edge detection to isolate critical biological features.</li>
-                  <li>Streamlined deployment pipelines, enabling interdisciplinary teams to scale feature extraction for broader studies.</li>
-                </ul>
-              </div>
+          </div>
+          <div class="timeline-event reveal-child">
+            <div class="timeline-meta"><span class="timeline-date">Jul 2024 — May 2025</span></div>
+            <div class="timeline-body">
+              <h3 class="timeline-role">Junior Specialist</h3>
+              <p class="timeline-org">University of California, Riverside</p>
+              <ul>
+                <li>Deployed deep learning classifiers for mosquito orientation analysis—96% accuracy.</li>
+                <li>Built end-to-end image processing pipelines using thresholding and edge detection to isolate critical biological features.</li>
+                <li>Enabled interdisciplinary teams to scale feature extraction workflows across large research datasets.</li>
+              </ul>
             </div>
-            <div class="timeline-event">
-              <div class="section-card">
-                <h3 class="tw-text-2xl tw-text-primary">Research Engineer, University of Guelph</h3>
-                <p class="tw-text-gray-500">Jan 2023 to Jun 2023</p>
-                <ul class="tw-list-disc">
-                  <li>Combined image segmentation with LLM-driven text analysis to evaluate soil properties, yielding an 18% accuracy gain.</li>
-                  <li>Engineered automated tooling that cut data processing time by 40% and improved indicator precision.</li>
-                  <li>Partnered directly with domain experts to fine-tune model heuristics for real-world agricultural use cases.</li>
-                </ul>
-              </div>
+          </div>
+          <div class="timeline-event reveal-child">
+            <div class="timeline-meta"><span class="timeline-date">Jan 2023 — Jun 2023</span></div>
+            <div class="timeline-body">
+              <h3 class="timeline-role">Research Engineer</h3>
+              <p class="timeline-org">University of Guelph</p>
+              <ul>
+                <li>Fused image segmentation with LLM-driven analysis to assess soil properties—18% accuracy gain over prior methods.</li>
+                <li>Cut data processing time by 40% through automated tooling; measurably improved indicator precision across the board.</li>
+                <li>Collaborated directly with domain scientists to translate model outputs into actionable agricultural insights.</li>
+              </ul>
             </div>
-            <div class="timeline-event">
-              <div class="section-card">
-                <h3 class="tw-text-2xl tw-text-primary">Computer Vision Researcher, Avawatz, UT Dallas, IIT Bombay</h3>
-                <p class="tw-text-gray-500">Mar 2022 to Jul 2022</p>
-                <ul class="tw-list-disc">
-                  <li>Trained object detection algorithms for autonomous navigation using Faster R-CNN and YOLO, driving a 15% accuracy improvement.</li>
-                  <li>Leveraged 3D simulations to boost segmentation precision by 20% for off-road environments.</li>
-                  <li>Optimized preprocessing pipelines to reduce large dataset training times by 25%.</li>
-                </ul>
-              </div>
+          </div>
+          <div class="timeline-event reveal-child">
+            <div class="timeline-meta"><span class="timeline-date">Mar 2022 — Jul 2022</span></div>
+            <div class="timeline-body">
+              <h3 class="timeline-role">Computer Vision Researcher</h3>
+              <p class="timeline-org">Avawatz · UT Dallas · IIT Bombay</p>
+              <ul>
+                <li>Built object detection systems for autonomous off-road navigation using Faster R-CNN and YOLO—15% accuracy improvement.</li>
+                <li>Leveraged 3D simulation environments to achieve a 20% gain in segmentation precision.</li>
+                <li>Cut large-dataset training time by 25% through preprocessing pipeline optimization.</li>
+              </ul>
             </div>
-            <div class="timeline-event">
-              <div class="section-card">
-                <h3 class="tw-text-2xl tw-text-primary">Machine Learning Engineer, Lokavidya, IIT Bombay</h3>
-                <p class="tw-text-gray-500">Jan 2021 to Sep 2022</p>
-                <ul class="tw-list-disc">
-                  <li>Architected NLP-driven knowledge curation engines, significantly improving search relevance and retrieval speed.</li>
-                  <li>Built and tuned classification and clustering models to structure chaotic datasets, minimizing data redundancy.</li>
-                  <li>Automated anomaly detection pipelines, cutting manual verification overhead by 20%.</li>
-                </ul>
-              </div>
+          </div>
+          <div class="timeline-event reveal-child">
+            <div class="timeline-meta"><span class="timeline-date">Jan 2021 — Sep 2022</span></div>
+            <div class="timeline-body">
+              <h3 class="timeline-role">Machine Learning Engineer</h3>
+              <p class="timeline-org">Lokavidya · IIT Bombay</p>
+              <ul>
+                <li>Architected NLP-driven knowledge curation engines that drove measurable improvements in search relevance and retrieval speed at scale.</li>
+                <li>Structured chaotic raw datasets through classification and clustering, eliminating redundancy across the board.</li>
+                <li>Automated anomaly detection pipelines, cutting manual verification overhead by 20%.</li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
-      <div class="tab-content" id="skills" role="tabpanel" tabindex="0">
-        <h2 class="tw-text-3xl tw-font-semibold tw-text-primary">Skills</h2>
-        <div>
-          <div>
-            <div class="skills-label">Core Capabilities</div>
-            <div class="skills-grid skills-grid-tech">
-              <div class="skill-card">Deep Learning</div>
-              <div class="skill-card">NLP</div>
-              <div class="skill-card">LLMs</div>
-              <div class="skill-card">Computer Vision</div>
-              <div class="skill-card">Generative Modeling</div>
-              <div class="skill-card">Diffusion Models</div>
-              <div class="skill-card">Machine Learning</div>
-              <div class="skill-card">Reinforcement Learning</div>
-              <div class="skill-card">Data Analysis</div>
-              <div class="skill-card">Data Visualization</div>
-              <div class="skill-card">Statistics</div>
-              <div class="skill-card">Graph Neural Networks</div>
+    </section>
+
+    <section class="content-section reveal" id="skills">
+      <div class="section-inner">
+        <div class="section-header">
+          <span class="section-label">EXPERTISE</span>
+          <h2 class="section-heading">Skills</h2>
+        </div>
+        <div class="skills-block">
+          <div class="skills-group reveal-child">
+            <p class="skills-group-label">Core Capabilities</p>
+            <div class="skills-grid">
+              <div class="skill-pill">Deep Learning</div>
+              <div class="skill-pill">NLP</div>
+              <div class="skill-pill">LLMs</div>
+              <div class="skill-pill">Computer Vision</div>
+              <div class="skill-pill">Generative Modeling</div>
+              <div class="skill-pill">Diffusion Models</div>
+              <div class="skill-pill">Machine Learning</div>
+              <div class="skill-pill">Reinforcement Learning</div>
+              <div class="skill-pill">Data Analysis</div>
+              <div class="skill-pill">Data Visualization</div>
+              <div class="skill-pill">Statistics</div>
+              <div class="skill-pill">Graph Neural Networks</div>
             </div>
-            <div>
-              <div class="skills-label">Languages & Frameworks</div>
-              <div class="skills-grid skills-grid-tools">
-                <div class="skill-card">Python</div>
-                <div class="skill-card">C++</div>
-                <div class="skill-card">C</div>
-                <div class="skill-card">Keras</div>
-                <div class="skill-card">TensorFlow</div>
-                <div class="skill-card">PyTorch</div>
-                <div class="skill-card">PyTorch Lightning</div>
-                <div class="skill-card">FastAI</div>
-                <div class="skill-card">OpenCV</div>
-                <div class="skill-card">Numpy</div>
-                <div class="skill-card">Matplotlib</div>
-                <div class="skill-card">Pandas</div>
-                <div class="skill-card">Hugging Face</div>
-                <div class="skill-card">SQL</div>
-                <div class="skill-card">Flask</div>
-                <div class="skill-card">BeautifulSoup</div>
-                <div class="skill-card">XGBoost</div>
-                <div class="skill-card">Tableau</div>
-                <div class="skill-card">MLOps</div>
-                <div class="skill-card">GCP</div>
-                <div class="skill-card">AWS</div>
-                <div class="skill-card">Kubernetes</div>
-                <div class="skill-card">Docker</div>
-                <div class="skill-card">Git CLI</div>
-                <div class="skill-card">Jupyter Notebooks</div>
-                <div class="skill-card">Anaconda</div>
-                <div class="skill-card">Linux Terminal</div>
-                <div class="skill-card">ROS</div>
-                <div class="skill-card">CUDA</div>
-                <div class="skill-card">MPS (Apple)</div>
-                <div class="skill-card">Apache Spark</div>
-                <div class="skill-card">Tensorboard</div>
-                <div class="skill-card">Firebase</div>
-                <div class="skill-card">MS Azure</div>
-                <div class="skill-card">MATLAB</div>
-              </div>
+          </div>
+          <div class="skills-group reveal-child">
+            <p class="skills-group-label">Languages &amp; Frameworks</p>
+            <div class="skills-grid">
+              <div class="skill-pill">Python</div>
+              <div class="skill-pill">C++</div>
+              <div class="skill-pill">C</div>
+              <div class="skill-pill">Keras</div>
+              <div class="skill-pill">TensorFlow</div>
+              <div class="skill-pill">PyTorch</div>
+              <div class="skill-pill">PyTorch Lightning</div>
+              <div class="skill-pill">FastAI</div>
+              <div class="skill-pill">OpenCV</div>
+              <div class="skill-pill">Numpy</div>
+              <div class="skill-pill">Matplotlib</div>
+              <div class="skill-pill">Pandas</div>
+              <div class="skill-pill">Hugging Face</div>
+              <div class="skill-pill">SQL</div>
+              <div class="skill-pill">Flask</div>
+              <div class="skill-pill">BeautifulSoup</div>
+              <div class="skill-pill">XGBoost</div>
+              <div class="skill-pill">Tableau</div>
+              <div class="skill-pill">MLOps</div>
+              <div class="skill-pill">GCP</div>
+              <div class="skill-pill">AWS</div>
+              <div class="skill-pill">Kubernetes</div>
+              <div class="skill-pill">Docker</div>
+              <div class="skill-pill">Git CLI</div>
+              <div class="skill-pill">Jupyter Notebooks</div>
+              <div class="skill-pill">Anaconda</div>
+              <div class="skill-pill">Linux Terminal</div>
+              <div class="skill-pill">ROS</div>
+              <div class="skill-pill">CUDA</div>
+              <div class="skill-pill">MPS (Apple)</div>
+              <div class="skill-pill">Apache Spark</div>
+              <div class="skill-pill">Tensorboard</div>
+              <div class="skill-pill">Firebase</div>
+              <div class="skill-pill">MS Azure</div>
+              <div class="skill-pill">MATLAB</div>
             </div>
           </div>
         </div>
       </div>
-      <div class="tab-content" id="projects" role="tabpanel" tabindex="0">
-        <h2 class="tw-text-3xl tw-font-semibold tw-text-primary">Projects</h2>
-        <div class="projects-grid">
-          <article class="project-card project-parallax">
-            <h3>ApollodB: Psychoacoustic EQ Generation System</h3>
-            <div class="project-meta">SOTA Project - 2024 to Present</div>
+    </section>
+
+    <section class="content-section reveal" id="projects">
+      <div class="section-inner">
+        <div class="section-header">
+          <span class="section-label">SELECTED WORK</span>
+          <h2 class="section-heading">Projects</h2>
+        </div>
+        <div class="projects-list">
+          <article class="project-item reveal-child">
+            <h3 class="project-title">ApollodB: Psychoacoustic EQ Generation System</h3>
+            <p class="project-meta">SOTA Project · 2024 to Present</p>
             <ul>
-              <li>Architected a TensorFlow-based psychoacoustic EQ generator, deployed on Google Cloud, achieving state-of-the-art metrics on the DEAM dataset.</li>
-              <li>Engineered custom neural networks that output highly personalized audio profiles grounded in psychoacoustic principles.</li>
-              <li>Open-sourced the complete platform, including the interactive validation suite, for community adoption and iteration.</li>
+              <li>Designed a TensorFlow-based psychoacoustic EQ engine deployed on Google Cloud—state-of-the-art results on the DEAM dataset.</li>
+              <li>Built custom neural architectures generating highly personalized audio profiles grounded in perceptual science.</li>
+              <li>Open-sourced the full platform, including the interactive validation suite, for community adoption.</li>
             </ul>
             <div class="project-tags">
-              <span class="tag">Python</span>
-              <span class="tag">TensorFlow</span>
-              <span class="tag">Google Cloud</span>
-              <span class="tag">Psychoacoustics</span>
-              <span class="tag">DEAM</span>
+              <span class="tag">Python</span><span class="tag">TensorFlow</span><span class="tag">Google Cloud</span><span class="tag">Psychoacoustics</span><span class="tag">DEAM</span>
             </div>
             <div class="project-actions">
               <a class="btn btn-secondary" href="https://bit.ly/apollodb" target="_blank" rel="noopener">Project page</a>
-              <a class="btn" href="https://github.com/parikshitkumar1/apollodB" target="_blank" rel="noopener">
-                <i class="bi bi-github"></i> <span>Code on GitHub</span>
-              </a>
+              <a class="btn" href="https://github.com/parikshitkumar1/apollodB" target="_blank" rel="noopener"><i class="bi bi-github"></i><span>Code on GitHub</span></a>
             </div>
           </article>
-
-          <article class="project-card project-parallax">
-            <h3>Generative Networks and VAEs to Assist Artists</h3>
-            <div class="project-meta">SRM IST - Jan 2023 to Jun 2023</div>
+          <article class="project-item reveal-child">
+            <h3 class="project-title">Generative Networks and VAEs to Assist Artists</h3>
+            <p class="project-meta">SRM IST · Jan 2023 to Jun 2023</p>
             <ul>
-              <li>Developed Variational Autoencoders (VAEs) for sketch refinement, demonstrating a 30% improvement in artist workflow efficiency.</li>
-              <li>Hit 90.6% accuracy on the CUHK Face Sketch Database; presented findings at ICCET 2023.</li>
-              <li>Designed the architecture specifically to preserve high-frequency details, closing the gap between generative output and practical artistic needs.</li>
+              <li>Built Variational Autoencoders for sketch refinement—demonstrated 30% improvement in artist workflow efficiency.</li>
+              <li>Achieved 90.6% accuracy on the CUHK Face Sketch Database; presented findings at ICCET 2023.</li>
+              <li>Designed the architecture to preserve high-frequency detail, closing the gap between generative output and artistic intent.</li>
             </ul>
             <div class="project-tags">
-              <span class="tag">Python</span>
-              <span class="tag">Keras</span>
-              <span class="tag">TensorFlow</span>
-              <span class="tag">OpenCV</span>
-              <span class="tag">VAE</span>
+              <span class="tag">Python</span><span class="tag">Keras</span><span class="tag">TensorFlow</span><span class="tag">OpenCV</span><span class="tag">VAE</span>
             </div>
             <div class="project-actions">
               <a class="btn btn-secondary" href="https://drive.google.com/file/d/14meP_sf1PVYOnPIVrWy6a_Ct7uuUXyug/view?usp=drive_link" target="_blank" rel="noopener">Read paper</a>
             </div>
           </article>
-
-          <article class="project-card project-parallax">
-            <h3>Energy Price Forecasting Using LSTMs and ARIMA</h3>
-            <div class="project-meta">SATU - 2022</div>
+          <article class="project-item reveal-child">
+            <h3 class="project-title">Energy Price Forecasting Using LSTMs and ARIMA</h3>
+            <p class="project-meta">SATU · 2022</p>
             <ul>
-              <li>Built hybrid LSTM/ARIMA forecasting pipelines, lifting prediction accuracy by 18% on complex Australian energy datasets.</li>
+              <li>Built hybrid LSTM/ARIMA forecasting pipelines—18% accuracy lift on complex Australian energy market data.</li>
               <li>Integrated NLP-driven trend analysis to surface broader market context for key stakeholders.</li>
-              <li>Presented the methodology and scalability trade-offs at the AIJR Conference 2022.</li>
+              <li>Presented methodology and scalability analysis at the AIJR Conference 2022.</li>
             </ul>
             <div class="project-tags">
-              <span class="tag">Python</span>
-              <span class="tag">LSTM</span>
-              <span class="tag">ARIMA</span>
-              <span class="tag">NLP</span>
+              <span class="tag">Python</span><span class="tag">LSTM</span><span class="tag">ARIMA</span><span class="tag">NLP</span>
             </div>
             <div class="project-actions">
               <a class="btn btn-secondary" href="https://drive.google.com/file/d/1a2FL1XepdZ3PMGqhTEmRMa-6dTXWo8Gy/view?usp=sharing" target="_blank" rel="noopener">Read paper</a>
             </div>
           </article>
-
-          <article class="project-card project-parallax">
-            <strong>PersonaForge: Fine-Tuned LLM Assistant</strong> - UC Riverside<br>
-            <span style="color:var(--text-muted);">Dec 2024</span>
+          <article class="project-item reveal-child">
+            <h3 class="project-title">PersonaForge: Fine-Tuned LLM Assistant</h3>
+            <p class="project-meta">UC Riverside · Dec 2024</p>
             <ul>
-              <li>Fine-tuned an offline personal LLM using llama.cpp to handle day-to-day task automation contextually.</li>
-              <li>Optimized for local-only deployment to guarantee strict data privacy constraints without sacrificing response latency.</li>
+              <li>Fine-tuned a personal LLM using llama.cpp for contextual, day-to-day task automation.</li>
+              <li>Engineered for local-only deployment: strict data privacy with zero latency sacrifice.</li>
             </ul>
             <div class="project-tags">
-              <span class="tag">Python</span>
-              <span class="tag">LLM</span>
-              <span class="tag">llama.cpp</span>
-              <span class="tag">Personal Assistant</span>
-              <span class="tag">NLP</span>
+              <span class="tag">Python</span><span class="tag">LLM</span><span class="tag">llama.cpp</span><span class="tag">Personal Assistant</span><span class="tag">NLP</span>
             </div>
           </article>
-
-          <article class="project-card project-parallax">
-            <strong>FormScribe: AI-Powered Web Form Automation</strong><br>
-            <span style="color:var(--text-muted);">Apr 2025</span>
+          <article class="project-item reveal-child">
+            <h3 class="project-title">FormScribe: AI-Powered Web Form Automation</h3>
+            <p class="project-meta">Apr 2025</p>
             <ul>
-              <li>Automated complex data entry workflows by bridging Selenium web drivers with local LLaMA 2 7B models.</li>
-              <li>Designed the architecture to function entirely offline, prioritizing robustness and data security across varied browser environments.</li>
+              <li>Automated complex data entry by bridging Selenium with a local LLaMA 2 7B model—fully offline, zero data exposure.</li>
+              <li>Architected for robustness and data security across diverse, real-world browser environments.</li>
             </ul>
             <div class="project-tags">
-              <span class="tag">Python</span>
-              <span class="tag">Selenium</span>
-              <span class="tag">Ollama</span>
-              <span class="tag">LLaMA 2 7B</span>
-              <span class="tag">AI Automation</span>
+              <span class="tag">Python</span><span class="tag">Selenium</span><span class="tag">Ollama</span><span class="tag">LLaMA 2 7B</span><span class="tag">AI Automation</span>
             </div>
             <div class="project-actions">
-              <a class="btn" href="https://github.com/parikshitkumar1/FormScribe" target="_blank" rel="noopener">
-                <i class="bi bi-github"></i> <span>Code on GitHub</span>
-              </a>
+              <a class="btn" href="https://github.com/parikshitkumar1/FormScribe" target="_blank" rel="noopener"><i class="bi bi-github"></i><span>Code on GitHub</span></a>
             </div>
           </article>
         </div>
       </div>
-      <div class="tab-content" id="education" role="tabpanel" tabindex="0">
-        <h2 class="tw-text-3xl tw-font-semibold tw-text-primary" style="text-align:center;">Education</h2>
-        <div class="timeline-container">
-          <div class="timeline">
-            <div class="timeline-event">
-              <div class="section-card">
-                <h3 class="tw-text-2xl tw-text-primary">Master of Science, Computer Science, UC Riverside</h3>
-                <p class="tw-text-gray-500">Sep 2023 to Dec 2024</p>
-              </div>
+    </section>
+
+    <section class="content-section reveal" id="education">
+      <div class="section-inner">
+        <div class="section-header">
+          <span class="section-label">ACADEMIC BACKGROUND</span>
+          <h2 class="section-heading">Education</h2>
+        </div>
+        <div class="timeline">
+          <div class="timeline-event reveal-child">
+            <div class="timeline-meta"><span class="timeline-date">Sep 2023 — Dec 2024</span></div>
+            <div class="timeline-body">
+              <h3 class="timeline-role">Master of Science, Computer Science</h3>
+              <p class="timeline-org">University of California, Riverside</p>
             </div>
-            <div class="timeline-event">
-              <div class="section-card">
-                <h3 class="tw-text-2xl tw-text-primary">Bachelor of Technology, Computer Science, SRM IST</h3>
-                <p class="tw-text-gray-500">2019 to 05/2023</p>
-              </div>
+          </div>
+          <div class="timeline-event reveal-child">
+            <div class="timeline-meta"><span class="timeline-date">2019 — May 2023</span></div>
+            <div class="timeline-body">
+              <h3 class="timeline-role">Bachelor of Technology, Computer Science</h3>
+              <p class="timeline-org">SRM Institute of Science and Technology</p>
             </div>
           </div>
         </div>
       </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span class="footer-copy"></span>
+      <div class="footer-socials">
+        <a href="https://github.com/parikshitkumar1" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/parikshitkumar1" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:mr.kumar.parikshit@gmail.com">Email</a>
+      </div>
     </div>
-  </div>
-  <footer></footer>
+    <div class="footer-credit">
+      Designed &amp; built for Parikshit Kumar by <span class="footer-agency">Studio Andromeda</span>
+    </div>
+  </footer>
+
   <script src="scripts/main.js" defer></script>
-  
 </body>
 </html>
